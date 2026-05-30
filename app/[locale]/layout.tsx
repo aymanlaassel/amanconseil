@@ -8,6 +8,8 @@ import { SITE_URL } from '@/lib/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LangGate } from '@/components/LangGate';
+import { JsonLd } from '@/components/JsonLd';
+import { organizationJsonLd } from '@/lib/seo';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -29,6 +31,12 @@ export async function generateMetadata({
       template: '%s · Aman Conseil',
     },
     description: t.raw('hero_sub').replace(/<[^>]+>/g, ''),
+    openGraph: {
+      siteName: 'Aman Conseil',
+      type: 'website',
+      locale,
+    },
+    twitter: { card: 'summary_large_image' },
   };
 }
 
@@ -52,6 +60,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={fontVariables}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <JsonLd data={organizationJsonLd()} />
           <LangGate />
           <Header />
           <main id="top">{children}</main>

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SectionHeader } from '@/components/SectionHeader';
 import { PrediagWizard } from '@/components/PrediagWizard';
+import { pageMetadata } from '@/lib/seo';
+import type { Locale } from '@/i18n/routing';
 
 export async function generateMetadata({
   params,
@@ -10,10 +12,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    pathname: '/pre-diagnostic',
     title: t.raw('pd_h2').replace(/<[^>]+>/g, ''),
     description: t.raw('pd_p').replace(/<[^>]+>/g, ''),
-  };
+  });
 }
 
 export default async function PrediagPage({ params }: { params: Promise<{ locale: string }> }) {

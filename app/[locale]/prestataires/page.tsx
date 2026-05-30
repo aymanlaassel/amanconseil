@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ProviderForm } from '@/components/ProviderForm';
 import { Html } from '@/components/Html';
+import { pageMetadata } from '@/lib/seo';
+import type { Locale } from '@/i18n/routing';
 
 export async function generateMetadata({
   params,
@@ -11,10 +13,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    pathname: '/prestataires',
     title: t.raw('prest_h2').replace(/<[^>]+>/g, ''),
     description: t.raw('prest_p').replace(/<[^>]+>/g, ''),
-  };
+  });
 }
 
 export default async function PrestatairesPage({

@@ -1,4 +1,7 @@
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/lib/seo';
+import type { Locale } from '@/i18n/routing';
 import { Hero } from '@/components/Hero';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Card } from '@/components/Card';
@@ -8,6 +11,21 @@ import { Button } from '@/components/Button';
 import { Html } from '@/components/Html';
 
 const STEPS = ['st1', 'st2', 'st3', 'st4', 'st5', 'st6', 'st7'] as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+  return pageMetadata({
+    locale: locale as Locale,
+    pathname: '',
+    title: 'Aman Conseil',
+    description: t.raw('hero_sub').replace(/<[^>]+>/g, ''),
+  });
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

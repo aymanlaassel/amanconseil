@@ -1,10 +1,14 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Html } from './Html';
 import { WHATSAPP_URL } from '@/lib/site';
+import type { Locale } from '@/i18n/routing';
+
+const RESOURCES_LABEL: Record<Locale, string> = { fr: 'Ressources', ar: 'موارد', en: 'Resources' };
 
 export async function Footer() {
   const t = await getTranslations();
+  const locale = (await getLocale()) as Locale;
 
   return (
     <footer className="site">
@@ -28,6 +32,7 @@ export async function Footer() {
               <Link href="/offre">
                 <Html html={t.raw('nav_offre')} />
               </Link>
+              <Link href="/ressources">{RESOURCES_LABEL[locale]}</Link>
               <Link href="/#confiance">{t.raw('foot_why')}</Link>
             </div>
             <div className="col">
