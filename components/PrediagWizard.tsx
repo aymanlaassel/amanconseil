@@ -9,6 +9,7 @@ import { submitPrediagnostic } from '@/app/actions/prediag';
 import { Link } from '@/i18n/navigation';
 import { Html } from './Html';
 import { Turnstile } from './Turnstile';
+import { Honeypot } from './Honeypot';
 
 type Screen = 'intro' | 'q' | 'lead' | 'result';
 
@@ -205,16 +206,7 @@ export function PrediagWizard() {
             />
           </div>
 
-          {/* Honeypot — hidden from real users */}
-          <input
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            aria-hidden="true"
-            value={honeypot}
-            onChange={(e) => setHoneypot(e.target.value)}
-            style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
-          />
+          <Honeypot value={honeypot} onChange={setHoneypot} />
 
           <Turnstile onToken={onToken} />
 

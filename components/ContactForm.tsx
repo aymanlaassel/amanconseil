@@ -9,6 +9,7 @@ import type { Locale } from '@/i18n/routing';
 import { submitContact } from '@/app/actions/contact';
 import { CONTACT_LABELS, FORM_ERROR } from '@/lib/form-labels';
 import { Turnstile } from './Turnstile';
+import { Honeypot } from './Honeypot';
 
 const schema = z.object({
   nom: z.string().trim().min(2),
@@ -74,15 +75,7 @@ export function ContactForm() {
           <textarea id="c-msg" placeholder={L.message_ph} {...register('message')} />
         </div>
 
-        <input
-          type="text"
-          tabIndex={-1}
-          autoComplete="off"
-          aria-hidden="true"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-          style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
-        />
+        <Honeypot value={honeypot} onChange={setHoneypot} />
 
         <Turnstile onToken={setToken} />
 

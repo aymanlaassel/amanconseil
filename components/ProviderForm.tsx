@@ -10,6 +10,7 @@ import { METIERS } from '@/lib/validation';
 import { submitProvider } from '@/app/actions/provider';
 import { FORM_ERROR } from '@/lib/form-labels';
 import { Turnstile } from './Turnstile';
+import { Honeypot } from './Honeypot';
 
 // Métier enum value → message-catalog key for its localized label.
 const METIER_OPTIONS: Array<{ value: (typeof METIERS)[number]; key: string }> = [
@@ -113,15 +114,7 @@ export function ProviderForm() {
           <textarea id="p-msg" placeholder={t.raw('prest_msg_ph')} {...register('message')} />
         </div>
 
-        <input
-          type="text"
-          tabIndex={-1}
-          autoComplete="off"
-          aria-hidden="true"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-          style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
-        />
+        <Honeypot value={honeypot} onChange={setHoneypot} />
 
         <Turnstile onToken={setToken} />
 
