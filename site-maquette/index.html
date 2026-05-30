@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Conseil — Sécurisez votre projet immobilier, évitez les arnaques</title>
+<meta name="description" content="Cabinet de conseil et d'assistance à maîtrise d'ouvrage en promotion immobilière au Maroc. Vérification foncière anti-arnaque, bilan promoteur, accompagnement de A à Z. Pré-diagnostic foncier gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1116; --ink2:#171C22; --paper:#F3F4EF; --paper2:#FBFBF8;
+    --line:#E1E3DC; --muted:#6E747A; --accent:#0FA86A; --accent-dim:#0B8455;
+    --orange:#E8973A; --rouge:#E0483B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Hanken Grotesk',sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  .disp{font-family:'Bricolage Grotesque'; letter-spacing:-.02em;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 22px;}
+  .tag{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-dim);}
+  a{color:inherit;}
+  .btn{display:inline-block; background:var(--accent); color:#fff; border:none; padding:15px 26px; font-family:'Bricolage Grotesque'; font-weight:700; font-size:16px; border-radius:3px; cursor:pointer; text-decoration:none; transition:background .2s;}
+  .btn:hover{background:var(--accent-dim);}
+  .btn.dark{background:var(--ink);} .btn.dark:hover{background:var(--ink2);}
+  .btn.ghost{background:transparent; color:var(--ink); border:1.5px solid var(--line);}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent-dim);}
+
+  /* NAV */
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(14,17,22,.96); backdrop-filter:blur(6px); color:var(--paper);}
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .brand{font-family:'Bricolage Grotesque'; font-weight:800; font-size:21px; letter-spacing:-.03em; color:var(--paper);}
+  .brand .c{color:var(--accent);}
+  .nav nav{display:flex; gap:26px; align-items:center;}
+  .nav nav a{font-size:14px; color:#C5CCD2; text-decoration:none; transition:color .15s;}
+  .nav nav a:hover{color:var(--paper);}
+  .nav .navcta{background:var(--accent); color:#fff; padding:9px 16px; border-radius:3px; font-weight:600; font-size:14px;}
+  .nav .navcta:hover{background:var(--accent-dim); color:#fff;}
+  .burger{display:none; background:none; border:none; color:var(--paper); font-size:24px; cursor:pointer;}
+  @media(max-width:820px){ .nav nav{display:none;} .burger{display:block;} }
+
+  /* HERO */
+  .hero{background:var(--ink); color:var(--paper); position:relative; overflow:hidden;}
+  .hero .grid-bg{position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:38px 38px;}
+  .hero .blob{position:absolute; width:520px; height:520px; right:-160px; top:-180px; background:radial-gradient(circle,rgba(15,168,106,.30),transparent 70%); filter:blur(10px);}
+  .hero .wrap{position:relative; padding:78px 22px 86px;}
+  .hero .ar{font-family:'Tajawal'; font-weight:700; color:var(--accent); font-size:20px; direction:rtl; margin-bottom:14px;}
+  .hero h1{font-family:'Bricolage Grotesque'; font-weight:800; font-size:clamp(34px,6vw,60px); line-height:1.02; letter-spacing:-.03em; max-width:18ch;}
+  .hero h1 .g{color:var(--accent);}
+  .hero p.sub{font-size:18px; color:#C5CCD2; margin:22px 0 30px; max-width:54ch;}
+  .hero .hero-money{font-size:16px; font-weight:600; color:var(--paper); max-width:56ch; margin:0 0 30px; padding:14px 18px; border-left:3px solid var(--accent); background:rgba(15,168,106,.1); border-radius:0 4px 4px 0;}
+  .hero .cta-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  .hero .trust{display:flex; gap:26px; flex-wrap:wrap; margin-top:46px; padding-top:26px; border-top:1px solid rgba(255,255,255,.1);}
+  .hero .trust div{display:flex; flex-direction:column;}
+  .hero .trust .n{font-family:'Bricolage Grotesque'; font-weight:800; font-size:30px; color:var(--accent);}
+  .hero .trust .l{font-size:13px; color:#9aa1a8;}
+  .hero .hgrid{display:grid; grid-template-columns:1.18fr .82fr; gap:48px; align-items:center;}
+  .hero-right{direction:rtl; text-align:right; border-right:3px solid var(--accent); padding-right:26px;}
+  .hero-right .ar-word{font-family:'Tajawal'; font-weight:700; font-size:66px; line-height:1; color:var(--accent);}
+  .hero-right .ar-h{font-family:'Tajawal'; font-weight:700; font-size:34px; line-height:1.3; margin:16px 0 18px; color:var(--paper);}
+  .hero-right .ar-h .g{color:var(--accent);}
+  .hero-right .ar-sub{font-family:'Tajawal'; font-weight:400; font-size:17px; line-height:1.8; color:#C5CCD2; margin-bottom:22px;}
+  .hero-right .ar-cta{font-family:'Tajawal'; font-weight:700; font-size:17px; color:var(--accent); text-decoration:none;}
+  .hero-right .ar-cta:hover{text-decoration:underline;}
+  @media(max-width:880px){ .hero .hgrid{grid-template-columns:1fr;} .hero-right{border-right:none; border-top:1px solid rgba(255,255,255,.12); padding-right:0; padding-top:28px; margin-top:8px;} .hero-right .ar-word{font-size:50px;} .hero-right .ar-h{font-size:27px;} }
+
+  /* SECTION base */
+  section.blk{padding:74px 0; border-bottom:1px solid var(--line);}
+  .shead{text-align:center; max-width:62ch; margin:0 auto 44px;}
+  .shead h2{font-family:'Bricolage Grotesque'; font-weight:800; font-size:clamp(26px,4vw,38px); letter-spacing:-.02em; margin:10px 0 12px;}
+  .shead p{font-size:16px; color:#39404a;}
+
+  /* PROBLEME */
+  .prob{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .prob .card{background:var(--paper2); border:1px solid var(--line); border-radius:6px; padding:24px;}
+  .prob .ic{width:44px; height:44px; border-radius:8px; background:rgba(224,72,59,.1); color:var(--rouge); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:14px;}
+  .prob h3{font-family:'Bricolage Grotesque'; font-weight:700; font-size:18px; margin-bottom:7px;}
+  .prob p{font-size:14.5px; color:#39404a;}
+  .cible .ic{background:rgba(15,168,106,.12); color:var(--accent-dim);}
+  @media(max-width:820px){ .prob{grid-template-columns:1fr;} }
+
+  /* ETAPES */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .step{background:var(--ink); color:var(--paper); border-radius:6px; padding:20px; position:relative; min-height:150px;}
+  .step .num{font-family:'JetBrains Mono'; font-size:12px; color:var(--accent); letter-spacing:.1em;}
+  .step h4{font-family:'Bricolage Grotesque'; font-weight:700; font-size:16px; margin:10px 0 8px;}
+  .step p{font-size:13px; color:#9aa1a8;}
+  @media(max-width:820px){ .steps{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:520px){ .steps{grid-template-columns:1fr;} }
+
+  /* CONFIANCE */
+  .conf{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:840px; margin:0 auto;}
+  .conf li{list-style:none; display:flex; gap:13px; align-items:flex-start; padding:16px; background:var(--paper2); border:1px solid var(--line); border-radius:6px;}
+  .conf .ic{flex:none; width:30px; height:30px; border-radius:50%; background:rgba(15,168,106,.12); color:var(--accent-dim); display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:700;}
+  .conf h4{font-family:'Bricolage Grotesque'; font-weight:700; font-size:15.5px; margin-bottom:3px;}
+  .conf p{font-size:13.5px; color:#39404a;}
+  @media(max-width:680px){ .conf{grid-template-columns:1fr;} }
+
+  /* OFFRE — entonnoir */
+  .funnel{display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:36px; font-family:'JetBrains Mono'; font-size:12px; color:var(--muted);}
+  .funnel span{background:var(--paper); border:1px solid var(--line); padding:7px 13px; border-radius:999px;}
+  .funnel span.hot{background:var(--accent); color:#04342C; border-color:var(--accent); font-weight:600;}
+  .funnel i{color:var(--accent);}
+
+  .packs{display:flex; flex-direction:column; gap:18px;}
+  .pdetail{border:1px solid var(--line); border-radius:10px; background:var(--paper); overflow:hidden; display:grid; grid-template-columns:300px 1fr;}
+  .pdetail.feat{border-color:var(--ink); box-shadow:0 14px 40px rgba(14,17,22,.12);}
+  .pdetail.dark{background:var(--ink); border-color:var(--ink); color:var(--paper);}
+  .pdetail.dark .pd-side{background:var(--ink); color:var(--paper); border-right-color:rgba(255,255,255,.12);}
+  .pdetail.dark .who, .pdetail.dark .punit{color:#9aa1a8;}
+  .pdetail.dark .pd-body h4{color:var(--accent);}
+  .pdetail.dark .pd-body li{color:#C5CCD2;}
+  .pdetail.dark .pd-meta{color:#9aa1a8; border-top-color:rgba(255,255,255,.12);}
+  .pdetail.dark .pd-meta b{color:var(--paper);}
+  .pdetail.dark .btn.ghost{color:var(--paper); border-color:rgba(255,255,255,.25);}
+  .pdetail.dark .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
+  [dir="rtl"] .pdetail.dark .pd-side{border-left-color:rgba(255,255,255,.12);}
+  .pd-side{padding:28px 26px; border-right:1px solid var(--line); display:flex; flex-direction:column;}
+  .pdetail.feat .pd-side{background:var(--ink); color:var(--paper); border-right-color:rgba(255,255,255,.12);}
+  .pd-side .badge{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-dim); margin-bottom:10px;}
+  .pdetail.feat .pd-side .badge{color:var(--accent);}
+  .pd-side h3{font-family:'Bricolage Grotesque'; font-weight:800; font-size:25px; margin-bottom:8px;}
+  .pd-side .who{font-size:13.5px; color:var(--muted); margin-bottom:18px; flex:1;}
+  .pdetail.feat .pd-side .who{color:#9aa1a8;}
+  .pd-side .price{font-family:'Bricolage Grotesque'; font-weight:800; font-size:24px; line-height:1.1;}
+  .pd-side .punit{font-size:12px; color:var(--muted); margin:4px 0 18px;}
+  .pdetail.feat .pd-side .punit{color:#9aa1a8;}
+  .pd-side .btn{text-align:center;}
+  .pd-body{padding:28px 30px;}
+  .pd-body .grp{margin-bottom:18px;}
+  .pd-body .grp:last-child{margin-bottom:0;}
+  .pd-body h4{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-dim); margin-bottom:10px;}
+  .pd-body ul{list-style:none;}
+  .pd-body li{font-size:14px; color:#39404a; padding:5px 0 5px 24px; position:relative;}
+  .pd-body li::before{content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700;}
+  .pd-body .avoid li::before{content:"✕"; color:var(--rouge);}
+  .pd-info{font-size:13px; color:#39404a; background:rgba(15,168,106,.1); border-left:3px solid var(--accent); padding:10px 13px; border-radius:0 4px 4px 0; margin-top:6px;}
+  .pd-info b{color:var(--ink);}
+  .pd-meta{display:flex; gap:24px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid var(--line); font-size:13px; color:var(--muted);}
+  .pd-meta b{color:var(--ink); font-weight:600;}
+  @media(max-width:760px){ .pdetail{grid-template-columns:1fr;} .pd-side{border-right:none; border-bottom:1px solid var(--line);} .pdetail.feat .pd-side{border-bottom-color:rgba(255,255,255,.12);} }
+  .note{text-align:center; font-size:12.5px; color:var(--muted); margin-top:24px; max-width:70ch; margin-left:auto; margin-right:auto;}
+  /* AMO 3 niveaux */
+  .amo-block{border:1px solid var(--ink); border-radius:10px; background:var(--ink); color:var(--paper); padding:28px;}
+  .amo-block .ah{font-family:'Bricolage Grotesque'; font-weight:800; font-size:23px; letter-spacing:-.02em; margin-bottom:6px;}
+  .amo-block .ap{font-size:14px; color:#9aa1a8; margin-bottom:22px; max-width:64ch;}
+  .tiers{display:grid; grid-template-columns:repeat(5,1fr); gap:12px;}
+  @media(max-width:980px){ .tiers{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .tiers{grid-template-columns:1fr;} }
+  .tier{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.14); border-radius:8px; padding:20px; display:flex; flex-direction:column;}
+  .tier.full{background:var(--accent); color:#04342C; border-color:var(--accent);}
+  .tier .steps{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.1em; color:var(--accent); margin-bottom:8px;}
+  .tier.full .steps{color:#04342C;}
+  .tier h5{font-family:'Bricolage Grotesque'; font-weight:700; font-size:18px; margin-bottom:12px; line-height:1.15;}
+  .tier ul{list-style:none; margin-bottom:14px; flex:1;}
+  .tier li{font-size:13px; color:#C5CCD2; padding:5px 0 5px 18px; position:relative;}
+  .tier.full li{color:#0B5C44;}
+  .tier li::before{content:"✓"; position:absolute; left:0; color:var(--accent);}
+  .tier.full li::before{color:#04342C;}
+  .tier .deliv{font-size:12.5px; padding:8px 11px; background:rgba(15,168,106,.14); color:var(--accent); border-radius:5px; margin-bottom:12px;}
+  .tier.full .deliv{background:rgba(0,0,0,.13); color:#04342C;}
+  .tier .tprice{font-family:'Bricolage Grotesque'; font-weight:700; font-size:14.5px; margin-bottom:12px;}
+  .tier .btn{text-align:center; font-size:14px; padding:11px; width:100%;}
+  [dir="rtl"] .tier li{padding:5px 18px 5px 0;}
+  [dir="rtl"] .tier li::before{left:auto; right:0;}
+  @media(max-width:760px){ .tiers{grid-template-columns:1fr;} }
+
+  /* PREDIAG SECTION */
+  #prediag{background:var(--ink); color:var(--paper);}
+  #prediag .shead h2{color:var(--paper);}
+  #prediag .shead p{color:#9aa1a8;}
+  .pd-shell{max-width:480px; margin:0 auto; background:var(--paper); color:var(--ink); border-radius:10px; overflow:hidden; box-shadow:0 30px 70px rgba(0,0,0,.4);}
+  .pd-bar{background:var(--ink2); color:var(--paper); padding:14px 20px; display:flex; align-items:center; justify-content:space-between;}
+  .pd-bar .b{font-family:'Bricolage Grotesque'; font-weight:800; font-size:16px;}
+  .pd-bar .b .c{color:var(--accent);}
+  .pd-bar .ar{font-family:'Tajawal'; font-weight:700; color:var(--accent); font-size:15px; direction:rtl;}
+  .pd-prog{height:3px; background:var(--line);}
+  .pd-prog .fill{height:100%; background:var(--accent); width:0; transition:width .35s;}
+  .pd-screen{padding:28px 24px; display:none; animation:fade .4s;}
+  .pd-screen.on{display:block;}
+  @keyframes fade{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+  .pd-kick{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-dim);}
+  .pd-h{font-family:'Bricolage Grotesque'; font-weight:800; font-size:28px; line-height:1.05; margin:12px 0;}
+  .pd-sub{font-size:14.5px; color:#39404a; margin-bottom:20px;}
+  .pd-feat{list-style:none; margin:16px 0 24px;}
+  .pd-feat li{font-size:14px; color:#39404a; padding:10px 0; border-top:1px solid var(--line); display:flex; gap:12px;}
+  .pd-feat li:last-child{border-bottom:1px solid var(--line);}
+  .pd-feat .n{font-family:'JetBrains Mono'; font-size:12px; color:var(--accent-dim);}
+  .pd-btn{display:block; width:100%; background:var(--accent); color:#fff; border:none; padding:16px; font-family:'Bricolage Grotesque'; font-weight:700; font-size:16px; border-radius:3px; cursor:pointer; transition:background .2s;}
+  .pd-btn:hover{background:var(--accent-dim);} .pd-btn:disabled{opacity:.4; cursor:not-allowed;}
+  .qcount{font-family:'JetBrains Mono'; font-size:12px; color:var(--muted); letter-spacing:.08em;}
+  .q{font-family:'Bricolage Grotesque'; font-weight:700; font-size:22px; line-height:1.12; margin:12px 0 6px;}
+  .qhint{font-size:13px; color:var(--muted); margin-bottom:20px;}
+  .opt{width:100%; text-align:left; background:var(--paper2); border:1.5px solid var(--line); padding:15px 17px; margin-bottom:10px; font-family:'Hanken Grotesk'; font-size:15px; font-weight:500; color:var(--ink); cursor:pointer; border-radius:3px; transition:all .15s; display:flex; align-items:center; gap:13px;}
+  .opt:hover{border-color:var(--accent);}
+  .opt .tick{width:20px; height:20px; border:2px solid var(--line); border-radius:50%; flex:none;}
+  .opt.sel{border-color:var(--accent); background:rgba(15,168,106,.07);}
+  .opt.sel .tick{border-color:var(--accent); background:var(--accent); box-shadow:inset 0 0 0 3px var(--paper2);}
+  .pd-nav{display:flex; gap:10px; margin-top:6px;}
+  .pd-back{width:52px; background:transparent; border:1.5px solid var(--line); color:var(--muted); font-size:20px; cursor:pointer; border-radius:2px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;}
+  .field input{width:100%; padding:13px 15px; border:1.5px solid var(--line); border-radius:3px; font-family:'Hanken Grotesk'; font-size:15px; background:var(--paper2); outline:none;}
+  .field input:focus{border-color:var(--accent);}
+  .consent{font-size:11.5px; color:var(--muted); margin:6px 0 20px; line-height:1.5;}
+  .verdict{padding:28px 24px; color:#fff; text-align:center;}
+  .verdict .vlabel{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.18em; text-transform:uppercase; opacity:.85;}
+  .verdict .vbig{font-family:'Bricolage Grotesque'; font-weight:800; font-size:28px; margin:8px 0 6px;}
+  .verdict .vmsg{font-size:14px; opacity:.92; max-width:34ch; margin:0 auto;}
+  .v-green{background:var(--accent);} .v-orange{background:var(--orange);} .v-rouge{background:var(--rouge);}
+  .score-row{display:flex; justify-content:center; gap:22px; margin-top:18px;}
+  .score-row .num{font-family:'Bricolage Grotesque'; font-weight:800; font-size:23px;}
+  .score-row .lb{font-size:10px; text-transform:uppercase; letter-spacing:.08em; opacity:.85;}
+  .recos{padding:22px 24px;}
+  .recos h3{font-family:'Bricolage Grotesque'; font-weight:700; font-size:17px; margin-bottom:12px;}
+  .reco{display:flex; gap:11px; padding:12px 0; border-top:1px solid var(--line); font-size:13.5px; color:#39404a;}
+  .reco:last-child{border-bottom:1px solid var(--line);}
+  .reco .ic{flex:none; width:21px; height:21px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff;}
+  .upsell{margin:6px 24px 0; background:var(--ink); color:var(--paper); padding:22px; border-radius:6px;}
+  .upsell .t{font-family:'Bricolage Grotesque'; font-weight:700; font-size:18px; margin-bottom:6px;}
+  .upsell .d{font-size:13px; color:#C5CCD2; margin-bottom:14px;}
+  .disclaimer{padding:16px 24px 26px; font-size:11.5px; color:var(--muted); line-height:1.5;}
+  .restart{display:block; width:100%; text-align:center; background:none; border:none; color:var(--muted); font-size:13px; padding:13px; cursor:pointer; text-decoration:underline;}
+
+  /* CONTACT */
+  .contact{display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center; max-width:880px; margin:0 auto;}
+  .contact h2{font-family:'Bricolage Grotesque'; font-weight:800; font-size:30px; letter-spacing:-.02em; margin-bottom:12px;}
+  .contact p{font-size:15px; color:#39404a; margin-bottom:20px;}
+  .contact .ways{display:flex; flex-direction:column; gap:12px;}
+  .contact .way{display:flex; align-items:center; gap:12px; padding:14px 16px; background:var(--paper2); border:1px solid var(--line); border-radius:6px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .contact .way .ic{width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;}
+  .wa{background:rgba(15,168,106,.12); color:var(--accent-dim);}
+  @media(max-width:680px){ .contact{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  footer{background:var(--ink); color:#9aa1a8; padding:48px 0 30px;}
+  footer .top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:30px;}
+  footer .brand{margin-bottom:10px;}
+  footer .bl{font-size:13px; color:#9aa1a8; max-width:34ch;}
+  footer .cols{display:flex; gap:50px; flex-wrap:wrap;}
+  footer .col h5{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;}
+  footer .col a{display:block; font-size:13.5px; color:#C5CCD2; text-decoration:none; margin-bottom:8px;}
+  footer .col a:hover{color:var(--paper);}
+  footer .legal{border-top:1px solid rgba(255,255,255,.1); padding-top:20px; font-size:12px; line-height:1.6;}
+
+  /* LANG GATE */
+  #langgate{position:fixed; inset:0; z-index:200; background:var(--ink); color:var(--paper); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px; text-align:center;}
+  #langgate.hidden{display:none;}
+  #langgate .gbrand{font-family:'Bricolage Grotesque'; font-weight:800; font-size:40px; letter-spacing:-.03em; margin-bottom:6px;}
+  #langgate .gbrand .c{color:var(--accent);}
+  #langgate .gbase{font-size:14px; color:#9aa1a8; margin-bottom:36px;}
+  #langgate .gopts{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  #langgate .gopt{min-width:150px; background:transparent; border:1.5px solid rgba(255,255,255,.2); color:var(--paper); padding:22px 26px; border-radius:8px; cursor:pointer; transition:all .18s;}
+  #langgate .gopt:hover{border-color:var(--accent); background:rgba(15,168,106,.1);}
+  #langgate .gopt .lg{font-family:'Bricolage Grotesque'; font-weight:700; font-size:22px; display:block;}
+  #langgate .gopt .ls{font-size:12px; color:#9aa1a8; margin-top:4px; letter-spacing:.08em; text-transform:uppercase;}
+
+  /* LANG SWITCH (nav) */
+  .langsel{display:flex; gap:2px; background:rgba(255,255,255,.08); border-radius:999px; padding:3px;}
+  .langsel button{background:transparent; border:none; color:#C5CCD2; font-size:12px; font-weight:600; padding:5px 11px; border-radius:999px; cursor:pointer; font-family:'Hanken Grotesk';}
+  .langsel button.on{background:var(--accent); color:#04342C;}
+  @media(max-width:820px){ .langsel{margin-left:auto;} }
+
+  /* HERO VERDICT CARD */
+  .vcard{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:26px;}
+  .vcard-h{font-family:'Bricolage Grotesque'; font-weight:700; font-size:20px; color:var(--paper); margin-bottom:18px;}
+  .vrow{display:flex; align-items:center; gap:12px; font-size:15px; color:#C5CCD2; padding:10px 0; border-top:1px solid rgba(255,255,255,.08);}
+  .vrow .dot{width:14px; height:14px; border-radius:50%; flex:none;}
+  .vrow .dot.g{background:var(--accent);} .vrow .dot.o{background:var(--orange);} .vrow .dot.r{background:var(--rouge);}
+  .vcard-cap{font-size:12.5px; color:#9aa1a8; margin:16px 0 18px;}
+  .vcard .btn{display:block; text-align:center;}
+
+  /* RTL */
+  [dir="rtl"] .hero-money{border-left:none; border-right:3px solid var(--accent); border-radius:4px 0 0 4px;}
+  [dir="rtl"] .pd-body li{padding:5px 24px 5px 0;}
+  [dir="rtl"] .pd-body li::before{left:auto; right:0;}
+  [dir="rtl"] .pd-info{border-left:none; border-right:3px solid var(--accent); border-radius:4px 0 0 4px;}
+  [dir="rtl"] .pdetail .pd-side{border-right:none; border-left:1px solid var(--line);}
+  [dir="rtl"] .pdetail.feat .pd-side{border-left-color:rgba(255,255,255,.12);}
+  [dir="rtl"] .opt{text-align:right;}
+  [dir="rtl"] .step .num, [dir="rtl"] .tag{letter-spacing:0;}
+  [lang="ar"]{font-family:'Tajawal',sans-serif;}
+  [lang="ar"] .disp, [lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] h4{font-family:'Tajawal',sans-serif;}
+  @media(max-width:760px){ [dir="rtl"] .pdetail .pd-side{border-left:none; border-bottom:1px solid var(--line);} }
+
+  /* PRESTATAIRES */
+  .prest{display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:start; max-width:960px; margin:0 auto;}
+  .prest .lead-txt{font-size:15px; color:#39404a; margin-bottom:18px;}
+  .prest .benefits{list-style:none;}
+  .prest .benefits li{display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-top:1px solid var(--line); font-size:14px; color:#39404a;}
+  .prest .benefits li:last-child{border-bottom:1px solid var(--line);}
+  .prest .benefits .ic{flex:none; width:27px; height:27px; border-radius:50%; background:rgba(15,168,106,.12); color:var(--accent-dim); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;}
+  .prest .benefits b{color:var(--ink);}
+  .prest-card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:26px;}
+  .prest-card select, .prest-card textarea{width:100%; padding:13px 15px; border:1.5px solid var(--line); border-radius:3px; font-family:'Hanken Grotesk'; font-size:15px; background:var(--paper2); outline:none;}
+  .prest-card select:focus, .prest-card textarea:focus{border-color:var(--accent);}
+  .prest-card textarea{resize:vertical; min-height:78px;}
+  .prest-ok{display:none; text-align:center; padding:24px 10px;}
+  .prest-ok.on{display:block;}
+  .prest-ok .chk{font-size:34px; color:var(--accent);}
+  .prest-ok .big{font-family:'Bricolage Grotesque'; font-weight:800; font-size:22px; color:var(--accent-dim); margin:8px 0 6px;}
+  .prest-ok p{font-size:14px; color:#39404a;}
+  @media(max-width:760px){ .prest{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<!-- LANG GATE -->
+<div id="langgate">
+  <div class="gbrand">aman<span class="c">.</span>conseil</div>
+  <div class="gbase">Choisissez votre langue · اختر لغتك · Choose your language</div>
+  <div class="gopts">
+    <button class="gopt" onclick="setLang('fr',true)"><span class="lg">Français</span><span class="ls">FR</span></button>
+    <button class="gopt" onclick="setLang('ar',true)"><span class="lg">العربية</span><span class="ls">AR</span></button>
+    <button class="gopt" onclick="setLang('en',true)"><span class="lg">English</span><span class="ls">EN</span></button>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">aman<span class="c">.</span>conseil</a>
+    <nav>
+      <a href="#probleme" data-i18n="nav_probleme">Le problème</a>
+      <a href="#etapes" data-i18n="nav_how">Comment ça marche</a>
+      <a href="#offre" data-i18n="nav_offre">Offre &amp; tarifs</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="#prestataires" data-i18n="nav_prest">Prestataires</a>
+      <a href="#prediag" class="navcta" data-i18n="nav_cta">Pré-diagnostic gratuit</a>
+      <span class="langsel" id="langsel">
+        <button data-lang="fr" onclick="setLang('fr',true)">FR</button>
+        <button data-lang="ar" onclick="setLang('ar',true)">ع</button>
+        <button data-lang="en" onclick="setLang('en',true)">EN</button>
+      </span>
+    </nav>
+    <button class="burger" onclick="document.querySelector('#prediag').scrollIntoView()">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="grid-bg"></div><div class="blob"></div>
+  <div class="wrap hgrid">
+    <div class="hero-left">
+    <h1 class="disp" data-i18n="hero_h1">Sécurisez votre projet immobilier. <span class="g">Évitez les arnaques.</span></h1>
+    <p class="sub" data-i18n="hero_sub">Vous voulez vous lancer dans la promotion immobilière mais le foncier vous fait peur ? Aman Conseil vérifie, structure et pilote votre projet de A à Z — et vous protège des pièges les plus coûteux du secteur.</p>
+    <p class="hero-money" data-i18n="hero_money">Vous avez le capital et l'ambition de devenir promoteur, mais pas l'expérience ? On met notre double expertise — immobilier et BTP — au service de votre projet, pour investir sans vous faire piéger.</p>
+    <div class="cta-row">
+      <a href="#prediag" class="btn" data-i18n="hero_cta1">Faire le pré-diagnostic gratuit →</a>
+      <a href="#etapes" class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.25)" data-i18n="hero_cta2">Comment ça marche</a>
+    </div>
+    <div class="trust">
+      <div><span class="n">~80%</span><span class="l" data-i18n="trust1">des arnaques se jouent<br>sur le terrain</span></div>
+      <div><span class="n">7</span><span class="l" data-i18n="trust2">étapes sécurisées,<br>du terrain à la livraison</span></div>
+      <div><span class="n">2 min</span><span class="l" data-i18n="trust3">pour évaluer le risque<br>de votre terrain</span></div>
+    </div>
+    </div><!-- /hero-left -->
+    <div class="hero-right">
+      <div class="vcard">
+        <div class="vcard-h" data-i18n="vcard_h">Votre verdict en 2 minutes</div>
+        <div class="vrow"><span class="dot g"></span><span data-i18n="vcard_green">Bon signe — les points clés sont réunis</span></div>
+        <div class="vrow"><span class="dot o"></span><span data-i18n="vcard_orange">À sécuriser — des points à vérifier</span></div>
+        <div class="vrow"><span class="dot r"></span><span data-i18n="vcard_red">Risque élevé — n'achetez pas en l'état</span></div>
+        <div class="vcard-cap" data-i18n="vcard_cap">10 questions · gratuit · sans engagement</div>
+        <a href="#prediag" class="btn" data-i18n="vcard_btn">Faire le test →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEME -->
+<section class="blk" id="probleme">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="prob_tag">Le problème</span>
+      <h2 class="disp" data-i18n="prob_h2">La promotion rapporte. Le terrain peut tout détruire.</h2>
+      <p data-i18n="prob_p">Les marges attirent du monde — mais le secteur est miné par les escroqueries et la complexité. Sans méthode, un porteur de projet avance en aveugle.</p>
+    </div>
+    <div class="prob">
+      <div class="card"><div class="ic">⚠</div><h3 data-i18n="prob1_h">Le foncier piégé</h3><p data-i18n="prob1_p">Faux titres, fausses procurations, terrain non constructible, indivision non réglée, hypothèque cachée. La majorité des fraudes se concentrent ici.</p></div>
+      <div class="card"><div class="ic">⚠</div><h3 data-i18n="prob2_h">Les coûts mal estimés</h3><p data-i18n="prob2_p">Sous-estimer les dépenses, surestimer les prix de vente, ignorer la trésorerie : la marge disparaît avant même le premier coup de pelle.</p></div>
+      <div class="card"><div class="ic">⚠</div><h3 data-i18n="prob3_h">La complexité réglementaire</h3><p data-i18n="prob3_p">Permis, VEFA, copropriété, garanties, société de projet… Un parcours réservé aux initiés, où chaque erreur coûte cher.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CIBLE -->
+<section class="blk" id="cible">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="cible_tag">À qui on s'adresse</span>
+      <h2 class="disp" data-i18n="cible_h2">Vous vous reconnaissez ?</h2>
+      <p data-i18n="cible_p">Que vous ayez le capital, un terrain ou des associés, le point commun est le même : un projet à fort potentiel, et le besoin d'être sécurisé.</p>
+    </div>
+    <div class="prob cible">
+      <div class="card"><div class="ic">＄</div><h3 data-i18n="cible1_h">Vous avez le capital</h3><p data-i18n="cible1_p">L'argent et l'ambition de devenir promoteur, mais pas l'expérience du foncier et du chantier. On transforme votre budget en projet maîtrisé, sans vous faire piéger.</p></div>
+      <div class="card"><div class="ic">▣</div><h3 data-i18n="cible2_h">Vous avez un terrain</h3><p data-i18n="cible2_p">Un terrain dont vous ne savez pas comment tirer la pleine valeur. On évalue son potentiel et on monte l'opération qui le valorise au mieux.</p></div>
+      <div class="card"><div class="ic">⚇</div><h3 data-i18n="cible3_h">Vous êtes plusieurs associés</h3><p data-i18n="cible3_p">Famille ou partenaires déjà réunis autour d'un projet. On structure proprement votre association et on professionnalise le montage.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPES -->
+<section class="blk" id="etapes" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="etapes_tag">Comment ça marche</span>
+      <h2 class="disp" data-i18n="etapes_h2">Un parcours sécurisé, en 7 étapes</h2>
+      <p data-i18n="etapes_p">Vous apportez votre terrain et votre projet. On s'occupe du reste — de la vérification jusqu'à la livraison.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h4 data-i18n="st1_h">Sécurisation du terrain</h4><p data-i18n="st1_p">Due diligence foncière complète. Verdict 🟢/🟠/🔴.</p></div>
+      <div class="step"><span class="num">02</span><h4 data-i18n="st2_h">Faisabilité &amp; bilan</h4><p data-i18n="st2_p">Coûts, recettes, marge, trésorerie. Décision go / no-go.</p></div>
+      <div class="step"><span class="num">03</span><h4 data-i18n="st3_h">Société &amp; associés</h4><p data-i18n="st3_p">Société de projet, pacte d'associés, dossier banque.</p></div>
+      <div class="step"><span class="num">04</span><h4 data-i18n="st4_h">Permis de construire</h4><p data-i18n="st4_p">Architecte, BET, dossier et suivi de l'autorisation.</p></div>
+      <div class="step"><span class="num">05</span><h4 data-i18n="st5_h">Chantier</h4><p data-i18n="st5_p">Appel d'offres, marché, suivi qualité / coûts / délais.</p></div>
+      <div class="step"><span class="num">06</span><h4 data-i18n="st6_h">Commercialisation</h4><p data-i18n="st6_p">Stratégie de prix, contrats VEFA conformes (loi 44-00).</p></div>
+      <div class="step"><span class="num">07</span><h4 data-i18n="st7_h">Livraison &amp; clôture</h4><p data-i18n="st7_p">Réception, copropriété, garanties, remise des clés.</p></div>
+      <div class="step" style="background:var(--accent); color:#04342C;"><span class="num" style="color:#04342C;">★</span><h4 style="color:#04342C;" data-i18n="st8_h">Vous, en sécurité</h4><p style="color:#0B5C44;" data-i18n="st8_p">Chaque dirham tracé, chaque risque signalé.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="blk" id="confiance">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="conf_tag">Le moteur de confiance</span>
+      <h2 class="disp" data-i18n="conf_h2">Pourquoi nous faire confiance</h2>
+      <p data-i18n="conf_p">Ce qui nous distingue des « conseillers » improvisés : une méthode, des preuves, et une indépendance totale.</p>
+    </div>
+    <ul class="conf">
+      <li><span class="ic">✓</span><div><h4 data-i18n="conf1_h">Vérification foncière systématique</h4><p data-i18n="conf1_p">Le piège n°1 du secteur, traité à la source (ANCFCC, agence urbaine, géomètre).</p></div></li>
+      <li><span class="ic">✓</span><div><h4 data-i18n="conf2_h">Réseau de prestataires vérifiés</h4><p data-i18n="conf2_p">Notaires, architectes, topographes, BET, entreprises — sélectionnés et suivis.</p></div></li>
+      <li><span class="ic">✓</span><div><h4 data-i18n="conf3_h">Bilan promoteur transparent</h4><p data-i18n="conf3_p">Vous savez exactement où va chaque dirham, du terrain à la livraison.</p></div></li>
+      <li><span class="ic">✓</span><div><h4 data-i18n="conf4_h">Conseil indépendant</h4><p data-i18n="conf4_p">On vous facture, jamais le vendeur. Aucune commission cachée, aucun conflit d'intérêts.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- OFFRE -->
+<section class="blk" id="offre" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="o_tag">Offre &amp; tarifs</span>
+      <h2 class="disp" data-i18n="o_h2">Commencez petit, sécurisez grand</h2>
+      <p data-i18n="o_p">Un parcours, pas un catalogue. Le Diagnostic est la porte d'entrée — son montant se déduit si vous poursuivez.</p>
+    </div>
+    <div class="packs">
+
+      <!-- AMO 5 niveaux -->
+      <div class="amo-block">
+        <div class="ah" data-i18n="amo_h">AMO — jusqu'où voulez-vous être accompagné ?</div>
+        <div class="ap" data-i18n="amo_p">Trois niveaux, selon l'étape où vous reprenez la main. Honoraires en % du coût de l'opération, estimés au devis selon le périmètre choisi.</div>
+        <div class="tiers">
+          <div class="tier">
+            <div class="steps" data-i18n="n1_steps">Niveau 1 · Étapes 1 → 2</div>
+            <h5 data-i18n="n1_h">Diagnostic</h5>
+            <ul data-i18n="n1_inc"><li>Sécurisation du terrain</li><li>Faisabilité &amp; bilan promoteur (esquisse incluse)</li><li>Recommandation go / no-go</li></ul>
+            <div class="deliv" data-i18n="n1_deliv">Livrable : décision go / no-go</div>
+            <div class="tprice" data-i18n="n1_price">Forfait · dès 15 000 DH</div>
+            <a href="#contact" class="btn" data-i18n="tier_cta">Demander un devis</a>
+          </div>
+          <div class="tier">
+            <div class="steps" data-i18n="n2_steps">Niveau 2 · Étapes 1 → 3</div>
+            <h5 data-i18n="n2_h">Montage</h5>
+            <ul data-i18n="n2_inc"><li>Tout le Niveau 1</li><li>Société de projet &amp; pacte d'associés</li><li>Dossier de financement bancaire</li></ul>
+            <div class="deliv" data-i18n="n2_deliv">Livrable : société constituée + financement</div>
+            <div class="tprice" data-i18n="n2_price">Forfait · dès 30 000 DH</div>
+            <a href="#contact" class="btn" data-i18n="tier_cta">Demander un devis</a>
+          </div>
+          <div class="tier">
+            <div class="steps" data-i18n="tier1_steps">Niveau 3 · Étapes 1 → 4</div>
+            <h5 data-i18n="tier1_h">Jusqu'au permis de construire</h5>
+            <ul data-i18n="tier1_inc"><li>Sécurisation du terrain</li><li>Faisabilité &amp; bilan promoteur</li><li>Société de projet &amp; pacte d'associés</li><li>Conception, dossier &amp; obtention du permis</li></ul>
+            <div class="deliv" data-i18n="tier1_deliv">Livrable : permis de construire obtenu</div>
+            <div class="tprice" data-i18n="tier_price">Honoraires selon le périmètre · sur devis</div>
+            <a href="#contact" class="btn" data-i18n="tier_cta">Demander un devis</a>
+          </div>
+          <div class="tier">
+            <div class="steps" data-i18n="tier2_steps">Étapes 1 → 5</div>
+            <h5 data-i18n="tier2_h">Jusqu'à la fin des travaux</h5>
+            <ul data-i18n="tier2_inc"><li>Tout le niveau précédent</li><li>Appel d'offres &amp; choix de l'entreprise</li><li>Marché de travaux &amp; suivi de chantier</li><li>Réception des travaux</li></ul>
+            <div class="deliv" data-i18n="tier2_deliv">Livrable : bâtiment réceptionné</div>
+            <div class="tprice" data-i18n="tier_price">Honoraires selon le périmètre · sur devis</div>
+            <a href="#contact" class="btn" data-i18n="tier_cta">Demander un devis</a>
+          </div>
+          <div class="tier full">
+            <div class="steps" data-i18n="tier3_steps">Étapes 1 → 7</div>
+            <h5 data-i18n="tier3_h">Jusqu'à la vente — complet</h5>
+            <ul data-i18n="tier3_inc"><li>Tout le niveau précédent</li><li>Stratégie de prix &amp; commercialisation</li><li>Contrats VEFA (loi 44-00)</li><li>Livraison, copropriété, garanties &amp; clôture</li></ul>
+            <div class="deliv" data-i18n="tier3_deliv">Livrable : lots vendus, projet clôturé</div>
+            <div class="tprice" data-i18n="tier3_price">2,5 – 4 % du coût de l'opération · dès 150 000 DH</div>
+            <a href="#contact" class="btn dark" data-i18n="tier_cta">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- A LA CARTE -->
+      <div class="pdetail dark">
+        <div class="pd-side">
+          <div class="badge" data-i18n="c_badge">Besoin ponctuel</div>
+          <h3 data-i18n="c_h3">Missions à la carte</h3>
+          <div class="who" data-i18n="c_who">Vous n'avez besoin que d'une expertise précise, sans accompagnement complet.</div>
+          <div class="price" data-i18n="c_price">À partir de 3 000 DH</div>
+          <div class="punit" data-i18n="c_punit">par jour, ou forfait · HT</div>
+          <a href="#contact" class="btn ghost" data-i18n="c_cta">Nous contacter</a>
+        </div>
+        <div class="pd-body">
+          <div class="grp"><h4 data-i18n="c_examples_h">Exemples de missions</h4>
+            <ul data-i18n="c_recv">
+              <li>Audit foncier seul d'un terrain précis</li>
+              <li>Bilan promoteur / étude de faisabilité d'une opération</li>
+              <li>Revue d'un contrat (compromis, VEFA, pacte)</li>
+              <li>Sélection et vérification d'une entreprise de travaux</li>
+            </ul>
+          </div>
+          <div class="pd-meta" data-i18n="c_meta"><span>Idéal pour <b>tester notre méthode</b> avant un accompagnement complet</span></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="note" data-i18n="o_note">Tarifs <b>indicatifs</b>, hors taxes (TVA 20 % en sus). Les débours (notaire, géomètre, droits ANCFCC, agence urbaine, étude géotechnique…) sont facturés à part, au coût réel. Le montant exact de l'AMO se calcule au devis, après un premier échange sur votre projet. Engagement : obligation de moyens, pas de garantie de résultat.</p>
+  </div>
+</section>
+
+<!-- PREDIAG -->
+<section class="blk" id="prediag">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" style="color:var(--accent)" data-i18n="pd_tag">Pré-diagnostic foncier · gratuit</span>
+      <h2 class="disp" data-i18n="pd_h2">Votre terrain est-il sûr ?</h2>
+      <p data-i18n="pd_p">10 questions, 2 minutes. Évaluez le risque de votre terrain avant de vous engager — et recevez nos recommandations.</p>
+    </div>
+
+    <div class="pd-shell">
+      <div class="pd-bar">
+        <span class="b">aman<span class="c">.</span>conseil</span>
+        <span class="ar">أمان</span>
+      </div>
+      <div class="pd-prog"><div class="fill" id="fill"></div></div>
+
+      <!-- INTRO -->
+      <div class="pd-screen on" id="s-intro">
+        <span class="pd-kick" data-i18n="pd_kick">Évaluation gratuite</span>
+        <h3 class="pd-h" data-i18n="pd_introh">Testez votre terrain en 2 minutes</h3>
+        <p class="pd-sub" data-i18n="pd_introsub">Un verdict immédiat sur le niveau de risque, et les points à sécuriser en priorité.</p>
+        <ul class="pd-feat">
+          <li data-i18n="pd_f1"><span class="n">01</span> Statut juridique &amp; propriété</li>
+          <li data-i18n="pd_f2"><span class="n">02</span> Charges, urbanisme &amp; constructibilité</li>
+          <li data-i18n="pd_f3"><span class="n">03</span> Verdict immédiat : 🟢 / 🟠 / 🔴</li>
+        </ul>
+        <button class="pd-btn" onclick="start()" data-i18n="pd_start">Commencer le test →</button>
+      </div>
+
+      <!-- QUESTIONS -->
+      <div class="pd-screen" id="s-q">
+        <span class="qcount" id="qcount">Question 1 / 10</span>
+        <div class="q" id="qtext"></div>
+        <div class="qhint" id="qhint"></div>
+        <div id="opts"></div>
+        <div class="pd-nav"><button class="pd-back" onclick="back()">←</button></div>
+      </div>
+
+      <!-- LEAD -->
+      <div class="pd-screen" id="s-lead">
+        <span class="pd-kick" data-i18n="lead_kick">Dernière étape</span>
+        <h3 class="pd-h" data-i18n="lead_h">Recevez votre rapport</h3>
+        <p class="pd-sub" data-i18n="lead_sub">Vos coordonnées pour découvrir votre verdict détaillé et nos recommandations.</p>
+        <div class="field"><label data-i18n="lead_nom">Nom complet</label><input id="f-nom" type="text" placeholder="Votre nom" data-i18n-ph="lead_nom_ph" oninput="checkLead()"></div>
+        <div class="field"><label data-i18n="lead_tel">Téléphone</label><input id="f-tel" type="tel" placeholder="06 00 00 00 00" oninput="checkLead()"></div>
+        <div class="field"><label data-i18n="lead_mail">Email (facultatif)</label><input id="f-mail" type="email" placeholder="vous@email.com" data-i18n-ph="lead_mail_ph"></div>
+        <p class="consent" data-i18n="lead_consent">En continuant, vous acceptez d'être recontacté par Aman Conseil au sujet de votre projet. Données traitées conformément à la loi 09-08 (CNDP).</p>
+        <button class="pd-btn" id="leadBtn" disabled onclick="finish()" data-i18n="lead_btn">Voir mon verdict →</button>
+      </div>
+
+      <!-- RESULT -->
+      <div class="pd-screen" id="s-result">
+        <div class="verdict" id="vbox">
+          <div class="vlabel" data-i18n="res_vlabel">Verdict du pré-diagnostic</div>
+          <div class="vbig" id="vbig"></div>
+          <div class="vmsg" id="vmsg"></div>
+          <div class="score-row">
+            <div><div class="num" id="sc-ok">0</div><div class="lb" data-i18n="res_ok">conformes</div></div>
+            <div><div class="num" id="sc-warn">0</div><div class="lb" data-i18n="res_warn">à vérifier</div></div>
+            <div><div class="num" id="sc-bad">0</div><div class="lb" data-i18n="res_bad">alertes</div></div>
+          </div>
+        </div>
+        <div class="recos"><h3 data-i18n="res_recos_h">Points à sécuriser</h3><div id="recoList"></div></div>
+        <div class="upsell">
+          <div class="t" data-i18n="res_up_t">Allez plus loin, en sécurité</div>
+          <div class="d" data-i18n="res_up_d">Le Pack Diagnostic vérifie chaque point à la source et vous remet un rapport opposable. Premier pas vers un projet sans mauvaise surprise.</div>
+          <button class="pd-btn" onclick="document.querySelector('#contact').scrollIntoView()" data-i18n="res_up_btn">Commander le Pack Diagnostic</button>
+        </div>
+        <p class="disclaimer" data-i18n="res_disc">Ce pré-diagnostic est <strong>indicatif</strong> et ne remplace ni une vérification professionnelle, ni l'intervention d'un notaire.</p>
+        <button class="restart" onclick="restart()" data-i18n="res_restart">↺ Recommencer le test</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="blk" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <span class="tag" data-i18n="contact_tag">Contact</span>
+        <h2 class="disp" data-i18n="contact_h2">Parlons de votre projet</h2>
+        <p data-i18n="contact_p">Un terrain en vue, un doute, une opération à lancer ? Échangeons. Le premier contact est sans engagement.</p>
+        <a href="#prediag" class="btn" data-i18n="contact_btn">Faire le pré-diagnostic d'abord →</a>
+      </div>
+      <div class="ways">
+        <a class="way" href="https://wa.me/212600000000" target="_blank" rel="noopener" data-i18n="contact_wa"><span class="ic wa">✆</span> WhatsApp · 06 00 00 00 00</a>
+        <a class="way" href="mailto:contact@amanconseil.ma" data-i18n="contact_mail"><span class="ic" style="background:rgba(14,17,22,.06);color:var(--ink)">✉</span> contact@amanconseil.ma</a>
+        <a class="way" href="#prediag" data-i18n="contact_rdv"><span class="ic" style="background:rgba(15,168,106,.12);color:var(--accent-dim)">◎</span> Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATAIRES -->
+<section class="blk" id="prestataires" style="background:var(--paper2);">
+  <div class="wrap">
+    <div class="shead">
+      <span class="tag" data-i18n="prest_tag">Prestataires</span>
+      <h2 class="disp" data-i18n="prest_h2">Rejoignez notre réseau de prestataires vérifiés</h2>
+      <p data-i18n="prest_p">Notaires, architectes, géomètres, bureaux d'études, entreprises BTP… Nous travaillons avec des partenaires sérieux et vérifiés. Présentez-vous, nous vous recontactons.</p>
+    </div>
+    <div class="prest">
+      <div>
+        <p class="lead-txt" data-i18n="prest_why">Pourquoi rejoindre le réseau Aman Conseil :</p>
+        <ul class="benefits" data-i18n="prest_benefits">
+          <li><span class="ic">✓</span><span><b>Apport d'affaires</b> — des clients sérieux, déjà qualifiés et accompagnés.</span></li>
+          <li><span class="ic">✓</span><span><b>Label « Projet vérifié »</b> — votre intervention adossée à notre méthode.</span></li>
+          <li><span class="ic">✓</span><span><b>Relation durable</b> — des projets récurrents, pas du one-shot.</span></li>
+        </ul>
+      </div>
+      <div class="prest-card">
+        <form id="prestForm" onsubmit="submitPrest(event)">
+          <div class="field"><label data-i18n="prest_nom">Nom / Raison sociale</label><input type="text" required placeholder="Votre nom ou société" data-i18n-ph="prest_nom_ph"></div>
+          <div class="field"><label data-i18n="prest_metier">Métier</label>
+            <select required>
+              <option value="" data-i18n="prest_opt0">— Choisir —</option>
+              <option data-i18n="prest_opt_not">Notaire</option>
+              <option data-i18n="prest_opt_arch">Architecte</option>
+              <option data-i18n="prest_opt_geo">Géomètre-topographe</option>
+              <option data-i18n="prest_opt_bet">Bureau d'études (BET)</option>
+              <option data-i18n="prest_opt_btp">Entreprise BTP</option>
+              <option data-i18n="prest_opt_geotech">Laboratoire géotechnique</option>
+              <option data-i18n="prest_opt_juriste">Juriste / Avocat</option>
+              <option data-i18n="prest_opt_compta">Comptable / Expert-comptable</option>
+              <option data-i18n="prest_opt_banquier">Banquier / Financement</option>
+              <option data-i18n="prest_opt_autre">Autre</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="prest_ville">Ville</label><input type="text" placeholder="Ex. Casablanca" data-i18n-ph="prest_ville_ph"></div>
+          <div class="field"><label data-i18n="prest_tel">Téléphone</label><input type="tel" required placeholder="06 00 00 00 00"></div>
+          <div class="field"><label data-i18n="prest_mail">Email</label><input type="email" placeholder="vous@email.com" data-i18n-ph="prest_mail_ph"></div>
+          <div class="field"><label data-i18n="prest_msg">Message (facultatif)</label><textarea placeholder="Vos références, votre zone d'intervention…" data-i18n-ph="prest_msg_ph"></textarea></div>
+          <p class="consent" data-i18n="prest_consent">Vos données sont traitées pour l'évaluation de votre candidature, conformément à la loi 09-08 (CNDP).</p>
+          <button class="pd-btn" type="submit" data-i18n="prest_btn">Envoyer ma candidature →</button>
+        </form>
+        <div class="prest-ok" id="prestOk">
+          <div class="chk">✓</div>
+          <div class="big" data-i18n="prest_ok_big">Merci, c'est envoyé !</div>
+          <p data-i18n="prest_ok_p">Nous étudions votre profil et revenons vers vous rapidement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand disp">aman<span class="c" style="color:var(--accent)">.</span>conseil</div>
+        <p class="bl" data-i18n="foot_bl">Le conseil qui sécurise vos projets immobiliers — du terrain à la livraison.</p>
+      </div>
+      <div class="cols">
+        <div class="col"><h5 data-i18n="foot_c1">Le cabinet</h5><a href="#etapes" data-i18n="nav_how">Comment ça marche</a><a href="#offre" data-i18n="nav_offre">Offre &amp; tarifs</a><a href="#confiance" data-i18n="foot_why">Pourquoi nous</a></div>
+        <div class="col"><h5 data-i18n="foot_c2">Commencer</h5><a href="#prediag" data-i18n="nav_cta">Pré-diagnostic gratuit</a><a href="#contact" data-i18n="nav_contact">Contact</a><a href="#prestataires" data-i18n="nav_prest">Prestataires</a><a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="col"><h5 data-i18n="foot_c3">Légal</h5><a href="#" data-i18n="foot_l1">Mentions légales</a><a href="#" data-i18n="foot_l2">CGU</a><a href="#" data-i18n="foot_l3">Confidentialité (CNDP)</a></div>
+      </div>
+    </div>
+    <div class="legal" data-i18n="foot_legal">
+      © 2026 Aman Conseil — أمان. Activité de conseil et d'assistance à maîtrise d'ouvrage en promotion immobilière.
+      Le cabinet n'exerce aucune activité de collecte de fonds ni d'intermédiation financière. Obligation de moyens, sans garantie de résultat.
+      Maquette de démonstration — coordonnées et liens à compléter.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== i18n engine ===== */
+const T={};
+Object.assign(T,{
+  nav_probleme:{fr:"Le problème",ar:"المشكل",en:"The problem"},
+  nav_how:{fr:"Comment ça marche",ar:"كيف نعمل",en:"How it works"},
+  nav_offre:{fr:"Offre &amp; tarifs",ar:"الخدمات والأسعار",en:"Offer &amp; pricing"},
+  nav_contact:{fr:"Contact",ar:"اتصل بنا",en:"Contact"},
+  nav_cta:{fr:"Pré-diagnostic gratuit",ar:"تشخيص أولي مجاني",en:"Free pre-diagnosis"},
+  hero_h1:{fr:'Sécurisez votre projet immobilier. <span class="g">Évitez les arnaques.</span>',ar:'أمّن مشروعك العقاري. <span class="g">تجنّب النصب.</span>',en:'Secure your real-estate project. <span class="g">Avoid the scams.</span>'},
+  hero_sub:{fr:"Vous voulez vous lancer dans la promotion immobilière mais le foncier vous fait peur ? Aman Conseil vérifie, structure et pilote votre projet de A à Z — et vous protège des pièges les plus coûteux du secteur.",ar:"تريد الاستثمار في الترقية العقارية لكن العقار يخيفك؟ أمان للاستشارة تتحقّق، تنظّم وتقود مشروعك من الألف إلى الياء — وتحميك من أكثر فخاخ القطاع كلفةً.",en:"Want to get into real-estate development but the land side scares you? Aman Conseil verifies, structures and steers your project from A to Z — and protects you from the sector's costliest traps."},
+  hero_money:{fr:"Vous avez le capital et l'ambition de devenir promoteur, mais pas l'expérience ? On met notre double expertise — immobilier et BTP — au service de votre projet, pour investir sans vous faire piéger.",ar:"لديك رأس المال والطموح لتصبح مُنعشًا عقاريًا لكن تنقصك الخبرة؟ نضع خبرتنا المزدوجة — العقار والبناء — في خدمة مشروعك، لتستثمر دون أن تقع في الفخّ.",en:"You have the capital and the ambition to become a developer, but not the experience? We put our dual expertise — real estate and construction — at the service of your project, so you invest without being trapped."},
+  hero_cta1:{fr:"Faire le pré-diagnostic gratuit →",ar:"ابدأ التشخيص الأولي المجاني ←",en:"Take the free pre-diagnosis →"},
+  hero_cta2:{fr:"Comment ça marche",ar:"كيف نعمل",en:"How it works"},
+  trust1:{fr:"des arnaques se jouent<br>sur le terrain",ar:"من عمليات النصب<br>تقع على مستوى الأرض",en:"of scams happen<br>at the land stage"},
+  trust2:{fr:"étapes sécurisées,<br>du terrain à la livraison",ar:"مراحل مؤمَّنة،<br>من الأرض إلى التسليم",en:"secured steps,<br>from land to delivery"},
+  trust3:{fr:"pour évaluer le risque<br>de votre terrain",ar:"لتقييم مخاطر<br>أرضك",en:"to assess your<br>land's risk"},
+  vcard_h:{fr:"Votre verdict en 2 minutes",ar:"نتيجتك في دقيقتين",en:"Your verdict in 2 minutes"},
+  vcard_green:{fr:"Bon signe — les points clés sont réunis",ar:"مؤشر جيد — النقاط الأساسية متوفّرة",en:"Good sign — key points are in place"},
+  vcard_orange:{fr:"À sécuriser — des points à vérifier",ar:"يتطلّب تأمينًا — نقاط يجب التحقق منها",en:"To secure — points to verify"},
+  vcard_red:{fr:"Risque élevé — n'achetez pas en l'état",ar:"خطر مرتفع — لا تشترِ في هذه الحالة",en:"High risk — don't buy as is"},
+  vcard_cap:{fr:"10 questions · gratuit · sans engagement",ar:"10 أسئلة · مجاني · دون التزام",en:"10 questions · free · no commitment"},
+  vcard_btn:{fr:"Faire le test →",ar:"ابدأ الاختبار ←",en:"Take the test →"}
+});
+Object.assign(T,{
+  prob_tag:{fr:"Le problème",ar:"المشكل",en:"The problem"},
+  prob_h2:{fr:"La promotion rapporte. Le terrain peut tout détruire.",ar:"الترقية العقارية مربحة. لكن الأرض قد تدمّر كل شيء.",en:"Development pays. The land can destroy everything."},
+  prob_p:{fr:"Les marges attirent du monde — mais le secteur est miné par les escroqueries et la complexité. Sans méthode, un porteur de projet avance en aveugle.",ar:"الهوامش تجذب الكثيرين — لكن القطاع مليء بعمليات النصب والتعقيدات. دون منهجية، يتقدّم صاحب المشروع وهو أعمى.",en:"The margins attract many — but the sector is riddled with scams and complexity. Without a method, a project owner moves forward blind."},
+  prob1_h:{fr:"Le foncier piégé",ar:"الأرض المفخّخة",en:"Booby-trapped land"},
+  prob1_p:{fr:"Faux titres, fausses procurations, terrain non constructible, indivision non réglée, hypothèque cachée. La majorité des fraudes se concentrent ici.",ar:"رسوم عقارية مزوّرة، وكالات مزيّفة، أرض غير قابلة للبناء، شياع غير مُسوّى، رهن مخفي. أغلب عمليات الاحتيال تتركّز هنا.",en:"Fake titles, fake powers of attorney, non-buildable land, unsettled joint ownership, hidden mortgage. Most fraud is concentrated here."},
+  prob2_h:{fr:"Les coûts mal estimés",ar:"تكاليف سيئة التقدير",en:"Mis-estimated costs"},
+  prob2_p:{fr:"Sous-estimer les dépenses, surestimer les prix de vente, ignorer la trésorerie : la marge disparaît avant même le premier coup de pelle.",ar:"التقليل من النفقات، المبالغة في أسعار البيع، تجاهل السيولة: يختفي الهامش قبل أول ضربة معول.",en:"Underestimating costs, overestimating sale prices, ignoring cash flow: the margin vanishes before the first shovel."},
+  prob3_h:{fr:"La complexité réglementaire",ar:"التعقيد التنظيمي",en:"Regulatory complexity"},
+  prob3_p:{fr:"Permis, VEFA, copropriété, garanties, société de projet… Un parcours réservé aux initiés, où chaque erreur coûte cher.",ar:"رخصة البناء، البيع على التصاميم، الملكية المشتركة، الضمانات، شركة المشروع… مسار محصور في المختصّين، كل خطأ فيه مكلف.",en:"Permits, off-plan sales, co-ownership, guarantees, project company… A path reserved for insiders, where every mistake is costly."},
+  cible_tag:{fr:"À qui on s'adresse",ar:"لمن نتوجّه",en:"Who it's for"},
+  cible_h2:{fr:"Vous vous reconnaissez ?",ar:"هل تجد نفسك هنا؟",en:"Do you recognise yourself?"},
+  cible_p:{fr:"Que vous ayez le capital, un terrain ou des associés, le point commun est le même : un projet à fort potentiel, et le besoin d'être sécurisé.",ar:"سواء كان لديك رأس المال أو أرض أو شركاء، القاسم المشترك واحد: مشروع واعد، وحاجة إلى التأمين.",en:"Whether you have capital, land or partners, the common thread is the same: a high-potential project, and the need to be secured."},
+  cible1_h:{fr:"Vous avez le capital",ar:"لديك رأس المال",en:"You have the capital"},
+  cible1_p:{fr:"L'argent et l'ambition de devenir promoteur, mais pas l'expérience du foncier et du chantier. On transforme votre budget en projet maîtrisé, sans vous faire piéger.",ar:"المال والطموح لتصبح مُنعشًا عقاريًا، لكن دون خبرة في العقار والورش. نحوّل ميزانيتك إلى مشروع محكم، دون أن تقع في الفخّ.",en:"The money and ambition to become a developer, but not the experience of land and construction. We turn your budget into a controlled project, without you being trapped."},
+  cible2_h:{fr:"Vous avez un terrain",ar:"لديك أرض",en:"You have land"},
+  cible2_p:{fr:"Un terrain dont vous ne savez pas comment tirer la pleine valeur. On évalue son potentiel et on monte l'opération qui le valorise au mieux.",ar:"أرض لا تعرف كيف تستخرج كامل قيمتها. نقيّم إمكاناتها وننجز العملية التي تثمّنها على أحسن وجه.",en:"Land whose full value you don't know how to unlock. We assess its potential and build the operation that maximises its value."},
+  cible3_h:{fr:"Vous êtes plusieurs associés",ar:"أنتم عدّة شركاء",en:"You are several partners"},
+  cible3_p:{fr:"Famille ou partenaires déjà réunis autour d'un projet. On structure proprement votre association et on professionnalise le montage.",ar:"عائلة أو شركاء مجتمعون حول مشروع. ننظّم شراكتكم بشكل سليم ونُضفي الاحترافية على التركيب.",en:"Family or partners already gathered around a project. We properly structure your partnership and professionalise the setup."}
+});
+Object.assign(T,{
+  etapes_tag:{fr:"Comment ça marche",ar:"كيف نعمل",en:"How it works"},
+  etapes_h2:{fr:"Un parcours sécurisé, en 7 étapes",ar:"مسار مؤمَّن، في 7 مراحل",en:"A secured journey, in 7 steps"},
+  etapes_p:{fr:"Vous apportez votre terrain et votre projet. On s'occupe du reste — de la vérification jusqu'à la livraison.",ar:"أنت تقدّم أرضك ومشروعك. ونحن نتكفّل بالباقي — من التحقق حتى التسليم.",en:"You bring your land and your project. We handle the rest — from verification to delivery."},
+  st1_h:{fr:"Sécurisation du terrain",ar:"تأمين الأرض",en:"Securing the land"},
+  st1_p:{fr:"Due diligence foncière complète. Verdict 🟢/🟠/🔴.",ar:"تحقّق عقاري شامل. نتيجة 🟢/🟠/🔴.",en:"Full land due diligence. Verdict 🟢/🟠/🔴."},
+  st2_h:{fr:"Faisabilité &amp; bilan",ar:"الجدوى والحصيلة",en:"Feasibility &amp; budget"},
+  st2_p:{fr:"Coûts, recettes, marge, trésorerie. Décision go / no-go.",ar:"التكاليف، المداخيل، الهامش، السيولة. قرار المضي / التوقف.",en:"Costs, revenue, margin, cash flow. Go / no-go decision."},
+  st3_h:{fr:"Société &amp; associés",ar:"الشركة والشركاء",en:"Company &amp; partners"},
+  st3_p:{fr:"Société de projet, pacte d'associés, dossier banque.",ar:"شركة المشروع، ميثاق الشركاء، ملف البنك.",en:"Project company, partners' agreement, bank file."},
+  st4_h:{fr:"Permis de construire",ar:"رخصة البناء",en:"Building permit"},
+  st4_p:{fr:"Architecte, BET, dossier et suivi de l'autorisation.",ar:"المهندس المعماري، مكتب الدراسات، الملف ومتابعة الترخيص.",en:"Architect, engineering office, file and permit follow-up."},
+  st5_h:{fr:"Chantier",ar:"الورش",en:"Construction"},
+  st5_p:{fr:"Appel d'offres, marché, suivi qualité / coûts / délais.",ar:"طلب العروض، الصفقة، متابعة الجودة / التكاليف / الآجال.",en:"Tender, works contract, quality / cost / schedule control."},
+  st6_h:{fr:"Commercialisation",ar:"التسويق",en:"Sales"},
+  st6_p:{fr:"Stratégie de prix, contrats VEFA conformes (loi 44-00).",ar:"استراتيجية الأسعار، عقود البيع على التصاميم المطابقة (القانون 44-00).",en:"Pricing strategy, compliant off-plan (VEFA) contracts (law 44-00)."},
+  st7_h:{fr:"Livraison &amp; clôture",ar:"التسليم والإقفال",en:"Delivery &amp; close-out"},
+  st7_p:{fr:"Réception, copropriété, garanties, remise des clés.",ar:"الاستلام، الملكية المشتركة، الضمانات، تسليم المفاتيح.",en:"Hand-over, co-ownership, guarantees, keys delivery."},
+  st8_h:{fr:"Vous, en sécurité",ar:"أنت، في أمان",en:"You, secured"},
+  st8_p:{fr:"Chaque dirham tracé, chaque risque signalé.",ar:"كل درهم مُتتبَّع، كل خطر مُنبَّه إليه.",en:"Every dirham tracked, every risk flagged."}
+});
+Object.assign(T,{
+  conf_tag:{fr:"Le moteur de confiance",ar:"محرّك الثقة",en:"The trust engine"},
+  conf_h2:{fr:"Pourquoi nous faire confiance",ar:"لماذا تثق بنا",en:"Why trust us"},
+  conf_p:{fr:"Ce qui nous distingue des « conseillers » improvisés : une méthode, des preuves, et une indépendance totale.",ar:"ما يميّزنا عن «المستشارين» المرتجلين: منهجية، أدلّة، واستقلالية تامة.",en:"What sets us apart from improvised 'advisers': a method, proof, and total independence."},
+  conf1_h:{fr:"Vérification foncière systématique",ar:"تحقّق عقاري منهجي",en:"Systematic land verification"},
+  conf1_p:{fr:"Le piège n°1 du secteur, traité à la source (ANCFCC, agence urbaine, géomètre).",ar:"الفخّ رقم 1 في القطاع، نعالجه من المصدر (المحافظة العقارية، الوكالة الحضرية، المساح).",en:"The sector's number-one trap, handled at the source (land registry, urban agency, surveyor)."},
+  conf2_h:{fr:"Réseau de prestataires vérifiés",ar:"شبكة مزوّدين موثوقين",en:"Network of vetted providers"},
+  conf2_p:{fr:"Notaires, architectes, topographes, BET, entreprises — sélectionnés et suivis.",ar:"موثّقون، مهندسون معماريون، مساحون، مكاتب دراسات، مقاولات — مُنتقاة ومُتابَعة.",en:"Notaries, architects, surveyors, engineering offices, contractors — selected and monitored."},
+  conf3_h:{fr:"Bilan promoteur transparent",ar:"حصيلة مالية شفّافة",en:"Transparent developer budget"},
+  conf3_p:{fr:"Vous savez exactement où va chaque dirham, du terrain à la livraison.",ar:"تعرف بالضبط أين يذهب كل درهم، من الأرض إلى التسليم.",en:"You know exactly where every dirham goes, from land to delivery."},
+  conf4_h:{fr:"Conseil indépendant",ar:"استشارة مستقلّة",en:"Independent advice"},
+  conf4_p:{fr:"On vous facture, jamais le vendeur. Aucune commission cachée, aucun conflit d'intérêts.",ar:"نحاسبك أنت، لا البائع أبدًا. لا عمولة خفية، ولا تضارب مصالح.",en:"We bill you, never the seller. No hidden commission, no conflict of interest."}
+});
+Object.assign(T,{
+  o_tag:{fr:"Offre &amp; tarifs",ar:"الخدمات والأسعار",en:"Offer &amp; pricing"},
+  o_h2:{fr:"Commencez petit, sécurisez grand",ar:"ابدأ بخطوة صغيرة، وأمِّن الكبير",en:"Start small, secure big"},
+  o_p:{fr:"Un parcours, pas un catalogue. Le Diagnostic est la porte d'entrée — son montant se déduit si vous poursuivez.",ar:"مسار، وليس قائمة خدمات. التشخيص هو باب الدخول — ويُخصم مبلغه إذا واصلت معنا.",en:"A journey, not a catalogue. The Diagnosis is the entry point — its cost is deducted if you continue."},
+  f_diag:{fr:"Pack Diagnostic",ar:"باقة التشخيص",en:"Diagnosis Pack"},
+  f_mont:{fr:"Pack Montage",ar:"باقة التركيب",en:"Setup Pack"},
+  f_amo:{fr:"AMO complète",ar:"مساعدة شاملة لصاحب المشروع",en:"Full project assistance"},
+  recv_h:{fr:"Ce que vous recevez",ar:"ما الذي تحصل عليه",en:"What you get"},
+  avoid_h:{fr:"Ce que ça vous évite",ar:"ما الذي يجنّبك إياه",en:"What it saves you from"},
+  d_badge:{fr:"Porte d'entrée",ar:"باب الدخول",en:"Entry point"},
+  d_h3:{fr:"Pack Diagnostic",ar:"باقة التشخيص",en:"Diagnosis Pack"},
+  d_who:{fr:"Vous hésitez à vous lancer, ou vous avez un terrain en vue et un doute. On vérifie avant que vous engagiez un dirham.",ar:"تتردّد في الانطلاق، أو لديك أرض في الأفق وبعض الشك. نتحقّق قبل أن تصرف درهمًا واحدًا.",en:"You're hesitating to start, or you have a plot in mind and a doubt. We verify before you commit a single dirham."},
+  d_price:{fr:"À partir de 15 000 DH",ar:"ابتداءً من 15 000 درهم",en:"From 15,000 MAD"},
+  d_punit:{fr:"indicatif · selon la taille du projet · HT",ar:"إرشادي · حسب حجم المشروع · بدون احتساب الضريبة",en:"indicative · by project size · excl. tax"},
+  d_cta:{fr:"Commencer par le pré-diagnostic",ar:"ابدأ بالتشخيص الأولي",en:"Start with the pre-diagnosis"},
+  d_recv:{fr:"<li><b>Rapport de risque foncier</b> — les 29 points vérifiés à la source (ANCFCC, agence urbaine, géomètre), verdict 🟢/🟠/🔴</li><li><b>Esquisse d'architecte</b> — le programme constructible (surfaces, nombre de lots)</li><li><b>Bilan promoteur chiffré</b> — coûts, recettes, marge et trésorerie, sur des bases précises</li><li><b>Recommandation go / no-go écrite</b> — une décision claire, argumentée</li>",ar:"<li><b>تقرير المخاطر العقارية</b> — 29 نقطة مُتحقَّق منها من المصدر (المحافظة العقارية، الوكالة الحضرية، المساح)، نتيجة 🟢/🟠/🔴</li><li><b>تصميم أولي للمهندس المعماري</b> — البرنامج القابل للبناء (المساحات، عدد البقع)</li><li><b>حصيلة مالية مرقّمة</b> — التكاليف، المداخيل، الهامش والسيولة، على أسس دقيقة</li><li><b>توصية مكتوبة بالمضي / التوقف</b> — قرار واضح ومُبرَّر</li>",en:"<li><b>Land risk report</b> — the 29 points verified at the source (land registry, urban agency, surveyor), verdict 🟢/🟠/🔴</li><li><b>Architect's sketch</b> — the buildable program (areas, number of units)</li><li><b>Costed developer budget</b> — costs, revenue, margin and cash flow, on precise bases</li><li><b>Written go / no-go recommendation</b> — a clear, argued decision</li>"},
+  d_avoid:{fr:"<li>Acheter un terrain piégé (faux titre, indivision, non constructible…)</li><li>Lancer une opération qui n'est pas rentable</li>",ar:"<li>شراء أرض مفخّخة (رسم مزوّر، شياع، غير قابلة للبناء…)</li><li>إطلاق عملية غير مربحة</li>",en:"<li>Buying booby-trapped land (fake title, joint ownership, non-buildable…)</li><li>Launching an operation that isn't profitable</li>"},
+  d_info:{fr:"<b>Esquisse d'architecte incluse :</b> nous faisons réaliser une esquisse qui fixe le programme réellement constructible (surfaces, nombre de lots). Votre bilan de faisabilité est donc chiffré sur des bases précises — pas une simple estimation.",ar:"<b>تصميم المهندس المعماري مُضمَّن:</b> ننجز تصميمًا أوليًا يحدّد البرنامج القابل للبناء فعليًا (المساحات، عدد البقع). وبذلك تُرقَّم حصيلة الجدوى على أسس دقيقة — لا مجرّد تقدير.",en:"<b>Architect's sketch included:</b> we have a sketch produced that fixes the truly buildable program (areas, number of units). Your feasibility budget is therefore costed on precise bases — not a mere estimate."},
+  d_meta:{fr:"<span>Durée : <b>quelques jours</b></span><span>Bonus : <b>montant déduit</b> si vous poursuivez en Montage ou AMO</span>",ar:"<span>المدة: <b>بضعة أيام</b></span><span>ميزة: <b>يُخصم المبلغ</b> إذا واصلت إلى التركيب أو المساعدة الشاملة</span>",en:"<span>Duration: <b>a few days</b></span><span>Bonus: <b>amount deducted</b> if you continue to Setup or full assistance</span>"},
+  m_badge:{fr:"Étape intermédiaire",ar:"مرحلة وسيطة",en:"Intermediate step"},
+  m_h3:{fr:"Pack Montage",ar:"باقة التركيب",en:"Setup Pack"},
+  m_who:{fr:"Votre projet est validé (feu vert du Diagnostic) et vous voulez le structurer proprement avant de mobiliser le financement.",ar:"مشروعك مُصادق عليه (ضوء أخضر من التشخيص) وتريد هيكلته بشكل سليم قبل تعبئة التمويل.",en:"Your project is validated (green light from the Diagnosis) and you want to structure it properly before raising financing."},
+  m_price:{fr:"À partir de 30 000 DH",ar:"ابتداءً من 30 000 درهم",en:"From 30,000 MAD"},
+  m_punit:{fr:"indicatif · HT",ar:"إرشادي · بدون ضريبة",en:"indicative · excl. tax"},
+  m_cta:{fr:"Demander un devis",ar:"اطلب عرض سعر",en:"Request a quote"},
+  m_recv:{fr:"<li><b>Société de projet dédiée</b> — projet de statuts (SARL/SA), répartition des parts selon les apports</li><li><b>Pacte d'associés</b> — gouvernance, distribution des bénéfices, clauses de sortie / préemption / blocage</li><li><b>Dossier de financement bancaire</b> — prêt à présenter à la banque (bilan, garanties, plan de trésorerie)</li>",ar:"<li><b>شركة مشروع مخصّصة</b> — مشروع نظام أساسي (ش.م.م/ش.م)، توزيع الحصص حسب المساهمات</li><li><b>ميثاق الشركاء</b> — الحوكمة، توزيع الأرباح، بنود الخروج / الشفعة / منع التفويت</li><li><b>ملف تمويل بنكي</b> — جاهز للعرض على البنك (الحصيلة، الضمانات، مخطط السيولة)</li>",en:"<li><b>Dedicated project company</b> — draft articles (LLC/SA), share split by contribution</li><li><b>Partners' agreement</b> — governance, profit distribution, exit / pre-emption / lock-up clauses</li><li><b>Bank financing file</b> — ready to present to the bank (budget, guarantees, cash-flow plan)</li>"},
+  m_avoid:{fr:"<li>Les conflits entre associés et les blocages non prévus</li><li>Un dossier bancaire bancal qui fait capoter le crédit</li>",ar:"<li>النزاعات بين الشركاء والانسدادات غير المتوقّعة</li><li>ملف بنكي هشّ يُفشل الحصول على القرض</li>",en:"<li>Conflicts between partners and unforeseen deadlocks</li><li>A shaky bank file that sinks the loan</li>"},
+  m_meta:{fr:"<span>Durée : <b>quelques semaines</b></span><span>Coordination notaire / avocat (honoraires en sus)</span>",ar:"<span>المدة: <b>بضعة أسابيع</b></span><span>تنسيق مع الموثّق / المحامي (أتعابهم إضافية)</span>",en:"<span>Duration: <b>a few weeks</b></span><span>Notary / lawyer coordination (their fees extra)</span>"},
+  a_badge:{fr:"Le cœur de l'accompagnement",ar:"قلب المرافقة",en:"The core of the support"},
+  a_h3:{fr:"AMO complète",ar:"مساعدة شاملة لصاحب المشروع",en:"Full project assistance"},
+  a_who:{fr:"Vous voulez être accompagné de A à Z, sans rien gérer seul. On pilote toute l'opération à vos côtés.",ar:"تريد مرافقة من الألف إلى الياء، دون أن تدير أي شيء بمفردك. نقود العملية بأكملها إلى جانبك.",en:"You want support from A to Z, without managing anything alone. We steer the whole operation by your side."},
+  a_price:{fr:"2,5 – 4 %",ar:"2,5 – 4 %",en:"2.5 – 4%"},
+  a_punit:{fr:"du coût de l'opération (dégressif) · à partir de 150 000 DH (HT) · estimé au devis",ar:"من كلفة العملية (تنازلي) · ابتداءً من 150 000 درهم (بدون ضريبة) · يُقدَّر بعرض السعر",en:"of the operation cost (sliding scale) · from 150,000 MAD (excl. tax) · quoted on estimate"},
+  a_cta:{fr:"Estimer mes honoraires",ar:"قدّر أتعابي",en:"Estimate my fees"},
+  a_recv:{fr:"<li><b>Pilotage des 7 étapes</b> — du terrain à la clôture, et tous les livrables de chaque étape</li><li><b>Suivi de chantier</b> — sélection des entreprises, contrôle qualité / coûts / délais (expertise BTP)</li><li><b>Reporting régulier</b> — vous savez en permanence où en est votre projet et votre budget</li>",ar:"<li><b>قيادة المراحل السبع</b> — من الأرض إلى الإقفال، وكل مُخرجات كل مرحلة</li><li><b>متابعة الورش</b> — اختيار المقاولات، مراقبة الجودة / التكاليف / الآجال (خبرة في البناء)</li><li><b>تقارير منتظمة</b> — تعرف باستمرار أين وصل مشروعك وميزانيتك</li>",en:"<li><b>Steering the 7 steps</b> — from land to close-out, and every deliverable of each step</li><li><b>Site supervision</b> — contractor selection, quality / cost / schedule control (construction expertise)</li><li><b>Regular reporting</b> — you always know where your project and budget stand</li>"},
+  a_avoid:{fr:"<li>Les dérives de coûts et de délais, les malfaçons, une entreprise défaillante</li><li>Les erreurs réglementaires (permis, VEFA, copropriété, garanties)</li>",ar:"<li>انزلاقات التكاليف والآجال، العيوب، تعثّر المقاولة</li><li>الأخطاء التنظيمية (الرخصة، البيع على التصاميم، الملكية المشتركة، الضمانات)</li>",en:"<li>Cost and schedule overruns, defects, a failing contractor</li><li>Regulatory mistakes (permit, off-plan sales, co-ownership, guarantees)</li>"},
+  a_meta:{fr:"<span>Durée : <b>toute l'opération (18–30 mois)</b></span><span>Honoraires ≈ <b>moins de 8 %</b> de la marge sécurisée</span>",ar:"<span>المدة: <b>طوال العملية (18–30 شهرًا)</b></span><span>الأتعاب ≈ <b>أقل من 8 %</b> من الهامش المؤمَّن</span>",en:"<span>Duration: <b>the whole operation (18–30 months)</b></span><span>Fees ≈ <b>under 8%</b> of the secured margin</span>"},
+  c_badge:{fr:"Besoin ponctuel",ar:"حاجة ظرفية",en:"One-off need"},
+  c_h3:{fr:"Missions à la carte",ar:"مهام حسب الطلب",en:"À la carte services"},
+  c_who:{fr:"Vous n'avez besoin que d'une expertise précise, sans accompagnement complet.",ar:"لا تحتاج سوى خبرة محدّدة، دون مرافقة كاملة.",en:"You only need a specific expertise, without full support."},
+  c_price:{fr:"À partir de 3 000 DH",ar:"ابتداءً من 3 000 درهم",en:"From 3,000 MAD"},
+  c_punit:{fr:"par jour, ou forfait · HT",ar:"في اليوم، أو مقطوع · بدون ضريبة",en:"per day, or flat fee · excl. tax"},
+  c_cta:{fr:"Nous contacter",ar:"اتصل بنا",en:"Contact us"},
+  c_examples_h:{fr:"Exemples de missions",ar:"أمثلة على المهام",en:"Example services"},
+  c_recv:{fr:"<li>Audit foncier seul d'un terrain précis</li><li>Bilan promoteur / étude de faisabilité d'une opération</li><li>Revue d'un contrat (compromis, VEFA, pacte)</li><li>Sélection et vérification d'une entreprise de travaux</li>",ar:"<li>تدقيق عقاري مستقل لأرض محدّدة</li><li>حصيلة مالية / دراسة جدوى لعملية</li><li>مراجعة عقد (وعد بالبيع، البيع على التصاميم، ميثاق)</li><li>اختيار والتحقق من مقاولة أشغال</li>",en:"<li>Standalone land audit of a specific plot</li><li>Developer budget / feasibility study of an operation</li><li>Contract review (preliminary agreement, off-plan, partners' pact)</li><li>Selecting and vetting a works contractor</li>"},
+  c_meta:{fr:"<span>Idéal pour <b>tester notre méthode</b> avant un accompagnement complet</span>",ar:"<span>مثالي <b>لتجربة منهجيتنا</b> قبل مرافقة كاملة</span>",en:"<span>Ideal to <b>test our method</b> before full support</span>"},
+  o_note:{fr:"Tarifs <b>indicatifs</b>, hors taxes (TVA 20 % en sus). Les débours (notaire, géomètre, droits ANCFCC, agence urbaine, étude géotechnique…) sont facturés à part, au coût réel. Le montant exact de l'AMO se calcule au devis, après un premier échange sur votre projet. Engagement : obligation de moyens, pas de garantie de résultat.",ar:"أسعار <b>إرشادية</b>، بدون احتساب الضريبة (تُضاف ض.ق.م 20 %). المصاريف (الموثّق، المساح، رسوم المحافظة العقارية، الوكالة الحضرية، الدراسة الجيوتقنية…) تُحتسب على حدة، بالكلفة الحقيقية. يُحدَّد المبلغ الدقيق للمساعدة الشاملة في عرض السعر، بعد أول تبادل حول مشروعك. الالتزام: بذل عناية، وليس ضمان نتيجة.",en:"<b>Indicative</b> prices, excl. tax (20% VAT added). Disbursements (notary, surveyor, land-registry fees, urban agency, geotechnical study…) are billed separately, at actual cost. The exact assistance fee is set in the quote, after a first discussion about your project. Commitment: best efforts, not a guarantee of results."}
+});
+Object.assign(T,{
+  pd_tag:{fr:"Pré-diagnostic foncier · gratuit",ar:"تشخيص عقاري أولي · مجاني",en:"Land pre-diagnosis · free"},
+  pd_h2:{fr:"Votre terrain est-il sûr ?",ar:"هل أرضك آمنة؟",en:"Is your land safe?"},
+  pd_p:{fr:"10 questions, 2 minutes. Évaluez le risque de votre terrain avant de vous engager — et recevez nos recommandations.",ar:"10 أسئلة، دقيقتان. قيّم مخاطر أرضك قبل أن تلتزم — واحصل على توصياتنا.",en:"10 questions, 2 minutes. Assess your land's risk before committing — and get our recommendations."},
+  pd_kick:{fr:"Évaluation gratuite",ar:"تقييم مجاني",en:"Free assessment"},
+  pd_introh:{fr:"Testez votre terrain en 2 minutes",ar:"اختبر أرضك في دقيقتين",en:"Test your land in 2 minutes"},
+  pd_introsub:{fr:"Un verdict immédiat sur le niveau de risque, et les points à sécuriser en priorité.",ar:"نتيجة فورية حول مستوى الخطر، والنقاط الواجب تأمينها أولًا.",en:"An instant verdict on the risk level, and the points to secure first."},
+  pd_f1:{fr:'<span class="n">01</span> Statut juridique &amp; propriété',ar:'<span class="n">01</span> الوضع القانوني والملكية',en:'<span class="n">01</span> Legal status &amp; ownership'},
+  pd_f2:{fr:'<span class="n">02</span> Charges, urbanisme &amp; constructibilité',ar:'<span class="n">02</span> الأعباء، التعمير وقابلية البناء',en:'<span class="n">02</span> Charges, planning &amp; buildability'},
+  pd_f3:{fr:'<span class="n">03</span> Verdict immédiat : 🟢 / 🟠 / 🔴',ar:'<span class="n">03</span> نتيجة فورية: 🟢 / 🟠 / 🔴',en:'<span class="n">03</span> Instant verdict: 🟢 / 🟠 / 🔴'},
+  pd_start:{fr:"Commencer le test →",ar:"ابدأ الاختبار ←",en:"Start the test →"},
+  lead_kick:{fr:"Dernière étape",ar:"الخطوة الأخيرة",en:"Last step"},
+  lead_h:{fr:"Recevez votre rapport",ar:"احصل على تقريرك",en:"Get your report"},
+  lead_sub:{fr:"Vos coordonnées pour découvrir votre verdict détaillé et nos recommandations.",ar:"بياناتك لاكتشاف نتيجتك المفصّلة وتوصياتنا.",en:"Your details to discover your detailed verdict and our recommendations."},
+  lead_nom:{fr:"Nom complet",ar:"الاسم الكامل",en:"Full name"},
+  lead_nom_ph:{fr:"Votre nom",ar:"اسمك",en:"Your name"},
+  lead_tel:{fr:"Téléphone",ar:"الهاتف",en:"Phone"},
+  lead_mail:{fr:"Email (facultatif)",ar:"البريد الإلكتروني (اختياري)",en:"Email (optional)"},
+  lead_mail_ph:{fr:"vous@email.com",ar:"you@email.com",en:"you@email.com"},
+  lead_consent:{fr:"En continuant, vous acceptez d'être recontacté par Aman Conseil au sujet de votre projet. Données traitées conformément à la loi 09-08 (CNDP).",ar:"بالمتابعة، توافق على أن تتواصل معك أمان للاستشارة بخصوص مشروعك. تُعالَج البيانات وفقًا للقانون 09-08 (CNDP).",en:"By continuing, you agree to be contacted by Aman Conseil about your project. Data processed under law 09-08 (CNDP)."},
+  lead_btn:{fr:"Voir mon verdict →",ar:"شاهد نتيجتي ←",en:"See my verdict →"},
+  res_vlabel:{fr:"Verdict du pré-diagnostic",ar:"نتيجة التشخيص الأولي",en:"Pre-diagnosis verdict"},
+  res_ok:{fr:"conformes",ar:"مطابقة",en:"compliant"},
+  res_warn:{fr:"à vérifier",ar:"للتحقق",en:"to verify"},
+  res_bad:{fr:"alertes",ar:"تنبيهات",en:"alerts"},
+  res_recos_h:{fr:"Points à sécuriser",ar:"نقاط يجب تأمينها",en:"Points to secure"},
+  res_up_t:{fr:"Allez plus loin, en sécurité",ar:"اذهب أبعد، في أمان",en:"Go further, securely"},
+  res_up_d:{fr:"Le Pack Diagnostic vérifie chaque point à la source et vous remet un rapport opposable. Premier pas vers un projet sans mauvaise surprise.",ar:"تتحقّق باقة التشخيص من كل نقطة من المصدر وتسلّمك تقريرًا ذا حجية. الخطوة الأولى نحو مشروع دون مفاجآت سيئة.",en:"The Diagnosis Pack verifies each point at the source and gives you a defensible report. The first step toward a project with no nasty surprises."},
+  res_up_btn:{fr:"Commander le Pack Diagnostic",ar:"اطلب باقة التشخيص",en:"Order the Diagnosis Pack"},
+  res_disc:{fr:"Ce pré-diagnostic est <strong>indicatif</strong> et ne remplace ni une vérification professionnelle, ni l'intervention d'un notaire.",ar:"هذا التشخيص الأولي <strong>إرشادي</strong> ولا يغني عن تحقّق مهني ولا عن تدخّل موثّق.",en:"This pre-diagnosis is <strong>indicative</strong> and replaces neither a professional verification nor a notary's involvement."},
+  res_restart:{fr:"↺ Recommencer le test",ar:"↺ إعادة الاختبار",en:"↺ Restart the test"},
+  contact_tag:{fr:"Contact",ar:"اتصل بنا",en:"Contact"},
+  contact_h2:{fr:"Parlons de votre projet",ar:"لنتحدّث عن مشروعك",en:"Let's talk about your project"},
+  contact_p:{fr:"Un terrain en vue, un doute, une opération à lancer ? Échangeons. Le premier contact est sans engagement.",ar:"أرض في الأفق، شكّ، أو عملية تريد إطلاقها؟ لنتحدّث. أول تواصل دون التزام.",en:"A plot in mind, a doubt, an operation to launch? Let's talk. The first contact is without commitment."},
+  contact_btn:{fr:"Faire le pré-diagnostic d'abord →",ar:"ابدأ بالتشخيص الأولي ←",en:"Do the pre-diagnosis first →"},
+  contact_wa:{fr:'<span class="ic wa">✆</span> WhatsApp · 06 00 00 00 00',ar:'<span class="ic wa">✆</span> واتساب · 06 00 00 00 00',en:'<span class="ic wa">✆</span> WhatsApp · 06 00 00 00 00'},
+  contact_mail:{fr:'<span class="ic" style="background:rgba(14,17,22,.06);color:var(--ink)">✉</span> contact@amanconseil.ma',ar:'<span class="ic" style="background:rgba(14,17,22,.06);color:var(--ink)">✉</span> contact@amanconseil.ma',en:'<span class="ic" style="background:rgba(14,17,22,.06);color:var(--ink)">✉</span> contact@amanconseil.ma'},
+  contact_rdv:{fr:'<span class="ic" style="background:rgba(15,168,106,.12);color:var(--accent-dim)">◎</span> Prendre rendez-vous',ar:'<span class="ic" style="background:rgba(15,168,106,.12);color:var(--accent-dim)">◎</span> حجز موعد',en:'<span class="ic" style="background:rgba(15,168,106,.12);color:var(--accent-dim)">◎</span> Book an appointment'},
+  foot_bl:{fr:"Le conseil qui sécurise vos projets immobiliers — du terrain à la livraison.",ar:"الاستشارة التي تؤمّن مشاريعك العقارية — من الأرض إلى التسليم.",en:"The advice that secures your real-estate projects — from land to delivery."},
+  foot_c1:{fr:"Le cabinet",ar:"المكتب",en:"The firm"},
+  foot_why:{fr:"Pourquoi nous",ar:"لماذا نحن",en:"Why us"},
+  foot_c2:{fr:"Commencer",ar:"ابدأ",en:"Get started"},
+  foot_c3:{fr:"Légal",ar:"قانوني",en:"Legal"},
+  foot_l1:{fr:"Mentions légales",ar:"الإشعارات القانونية",en:"Legal notice"},
+  foot_l2:{fr:"CGU",ar:"شروط الاستخدام",en:"Terms"},
+  foot_l3:{fr:"Confidentialité (CNDP)",ar:"الخصوصية (CNDP)",en:"Privacy (CNDP)"},
+  foot_legal:{fr:"© 2026 Aman Conseil — أمان. Activité de conseil et d'assistance à maîtrise d'ouvrage en promotion immobilière. Le cabinet n'exerce aucune activité de collecte de fonds ni d'intermédiation financière. Obligation de moyens, sans garantie de résultat. Maquette de démonstration — coordonnées et liens à compléter.",ar:"© 2026 أمان للاستشارة. نشاط استشارة ومساعدة لصاحب المشروع في الترقية العقارية. لا يمارس المكتب أي نشاط لجمع الأموال أو الوساطة المالية. التزام ببذل العناية، دون ضمان النتيجة. نموذج تجريبي — البيانات والروابط للإكمال.",en:"© 2026 Aman Conseil — أمان. Advisory and project-owner assistance in real-estate development. The firm carries out no fundraising or financial intermediation. Best-efforts commitment, no guarantee of results. Demo mockup — details and links to be completed."},
+  qcount_word:{fr:"Question",ar:"سؤال",en:"Question"},
+  v_red_big:{fr:"🔴 Risque élevé",ar:"🔴 خطر مرتفع",en:"🔴 High risk"},
+  v_red_msg:{fr:"Au moins un point bloquant n'est pas réuni. N'achetez pas sans vérification approfondie.",ar:"نقطة حاسمة واحدة على الأقل غير متوفّرة. لا تشترِ دون تحقّق معمّق.",en:"At least one blocking point is missing. Don't buy without thorough verification."},
+  v_orange_big:{fr:"🟠 À sécuriser",ar:"🟠 يتطلّب تأمينًا",en:"🟠 To secure"},
+  v_orange_msg:{fr:"Plusieurs points doivent être vérifiés avant de vous engager.",ar:"عدة نقاط يجب التحقق منها قبل أن تلتزم.",en:"Several points must be verified before you commit."},
+  v_green_big:{fr:"🟢 Bon signe",ar:"🟢 مؤشر جيد",en:"🟢 Good sign"},
+  v_green_msg:{fr:"Les points clés semblent réunis. Une vérification complète reste recommandée avant signature.",ar:"يبدو أن النقاط الأساسية متوفّرة. يبقى التحقق الكامل موصى به قبل التوقيع.",en:"The key points appear to be in place. A full verification is still recommended before signing."},
+  recos_none:{fr:"Aucun point critique détecté. Confirmez tout de même avec une vérification professionnelle.",ar:"لم تُرصد أي نقطة حرجة. أكّد ذلك مع تحقّق مهني على كل حال.",en:"No critical point detected. Still confirm with a professional verification."}
+});
+Object.assign(T,{
+  amo_h:{fr:"AMO — jusqu'où voulez-vous être accompagné ?",ar:"المساعدة لصاحب المشروع — إلى أي مدى تريد المرافقة؟",en:"Project assistance — how far do you want support?"},
+  amo_p:{fr:"Cinq niveaux, selon l'étape jusqu'où vous voulez être accompagné. Niveaux 1-2 au forfait ; au-delà, honoraires en % du coût de l'opération, estimés au devis selon le périmètre.",ar:"خمسة مستويات، حسب المرحلة التي تريد المرافقة حتى بلوغها. المستويان 1-2 بسعر مقطوع؛ وما بعدهما بنسبة من كلفة العملية، تُقدَّر بعرض السعر حسب النطاق.",en:"Five levels, depending on how far you want support. Levels 1-2 are flat-fee; beyond that, fees as a % of the operation cost, quoted on estimate by scope."},
+  n1_steps:{fr:"Niveau 1 · Étapes 1 → 2",ar:"المستوى 1 · المراحل 1–2",en:"Level 1 · Steps 1 → 2"},
+  n1_h:{fr:"Diagnostic",ar:"التشخيص",en:"Diagnosis"},
+  n1_inc:{fr:"<li>Sécurisation du terrain</li><li>Faisabilité &amp; bilan promoteur (esquisse incluse)</li><li>Recommandation go / no-go</li>",ar:"<li>تأمين الأرض</li><li>الجدوى والحصيلة المالية (التصميم الأولي مُضمَّن)</li><li>توصية بالمضي / التوقف</li>",en:"<li>Securing the land</li><li>Feasibility &amp; developer budget (sketch included)</li><li>Go / no-go recommendation</li>"},
+  n1_deliv:{fr:"Livrable : décision go / no-go",ar:"المُخرَج: قرار المضي / التوقف",en:"Deliverable: go / no-go decision"},
+  n1_price:{fr:"Forfait · dès 15 000 DH",ar:"مقطوع · ابتداءً من 15 000 درهم",en:"Flat fee · from 15,000 MAD"},
+  n2_steps:{fr:"Niveau 2 · Étapes 1 → 3",ar:"المستوى 2 · المراحل 1–3",en:"Level 2 · Steps 1 → 3"},
+  n2_h:{fr:"Montage",ar:"التركيب",en:"Setup"},
+  n2_inc:{fr:"<li>Tout le Niveau 1</li><li>Société de projet &amp; pacte d'associés</li><li>Dossier de financement bancaire</li>",ar:"<li>كل المستوى 1</li><li>شركة المشروع وميثاق الشركاء</li><li>ملف التمويل البنكي</li>",en:"<li>Everything in Level 1</li><li>Project company &amp; partners' agreement</li><li>Bank financing file</li>"},
+  n2_deliv:{fr:"Livrable : société constituée + financement",ar:"المُخرَج: شركة مؤسَّسة + تمويل",en:"Deliverable: company set up + financing"},
+  n2_price:{fr:"Forfait · dès 30 000 DH",ar:"مقطوع · ابتداءً من 30 000 درهم",en:"Flat fee · from 30,000 MAD"},
+  tier1_steps:{fr:"Niveau 3 · Étapes 1 → 4",ar:"المستوى 3 · المراحل 1–4",en:"Level 3 · Steps 1 → 4"},
+  tier1_h:{fr:"Jusqu'au permis de construire",ar:"حتى رخصة البناء",en:"Up to the building permit"},
+  tier1_inc:{fr:"<li>Tout le Niveau 2</li><li>Conception &amp; dossier de permis</li><li>Obtention du permis de construire</li>",ar:"<li>كل المستوى 2</li><li>التصميم وملف الرخصة</li><li>الحصول على رخصة البناء</li>",en:"<li>Everything in Level 2</li><li>Design &amp; permit file</li><li>Obtaining the building permit</li>"},
+  tier1_deliv:{fr:"Livrable : permis de construire obtenu",ar:"المُخرَج: رخصة البناء مُحصَّل عليها",en:"Deliverable: building permit obtained"},
+  tier2_steps:{fr:"Niveau 4 · Étapes 1 → 5",ar:"المستوى 4 · المراحل 1–5",en:"Level 4 · Steps 1 → 5"},
+  tier2_h:{fr:"Jusqu'à la fin des travaux",ar:"حتى نهاية الأشغال",en:"Up to completion of works"},
+  tier2_inc:{fr:"<li>Tout le Niveau 3</li><li>Appel d'offres &amp; choix de l'entreprise</li><li>Marché de travaux &amp; suivi de chantier</li><li>Réception des travaux</li>",ar:"<li>كل المستوى 3</li><li>طلب العروض واختيار المقاولة</li><li>صفقة الأشغال ومتابعة الورش</li><li>استلام الأشغال</li>",en:"<li>Everything in Level 3</li><li>Tender &amp; contractor selection</li><li>Works contract &amp; site supervision</li><li>Acceptance of the works</li>"},
+  tier2_deliv:{fr:"Livrable : bâtiment réceptionné",ar:"المُخرَج: بناية مُستلَمة",en:"Deliverable: building accepted"},
+  tier3_steps:{fr:"Niveau 5 · Étapes 1 → 7",ar:"المستوى 5 · المراحل 1–7",en:"Level 5 · Steps 1 → 7"},
+  tier3_h:{fr:"Jusqu'à la vente — complet",ar:"حتى البيع — شامل",en:"Up to the sale — complete"},
+  tier3_inc:{fr:"<li>Tout le Niveau 4</li><li>Stratégie de prix &amp; commercialisation</li><li>Contrats VEFA (loi 44-00)</li><li>Livraison, copropriété, garanties &amp; clôture</li>",ar:"<li>كل المستوى 4</li><li>استراتيجية الأسعار والتسويق</li><li>عقود البيع على التصاميم (القانون 44-00)</li><li>التسليم، الملكية المشتركة، الضمانات والإقفال</li>",en:"<li>Everything in Level 4</li><li>Pricing strategy &amp; sales</li><li>Off-plan (VEFA) contracts (law 44-00)</li><li>Delivery, co-ownership, guarantees &amp; close-out</li>"},
+  tier3_deliv:{fr:"Livrable : lots vendus, projet clôturé",ar:"المُخرَج: بقع مبيعة، المشروع مُقفَل",en:"Deliverable: units sold, project closed"},
+  tier_price:{fr:"Honoraires selon le périmètre · sur devis",ar:"الأتعاب حسب النطاق · بعرض سعر",en:"Fees by scope · on quote"},
+  tier3_price:{fr:"2,5 – 4 % du coût de l'opération · dès 150 000 DH",ar:"2,5 – 4 % من كلفة العملية · ابتداءً من 150 000 درهم",en:"2.5 – 4% of the operation cost · from 150,000 MAD"},
+  tier_cta:{fr:"Demander un devis",ar:"اطلب عرض سعر",en:"Request a quote"}
+});
+Object.assign(T,{
+  nav_prest:{fr:"Prestataires",ar:"المزوّدون",en:"Providers"},
+  prest_tag:{fr:"Prestataires",ar:"المزوّدون",en:"Providers"},
+  prest_h2:{fr:"Rejoignez notre réseau de prestataires vérifiés",ar:"انضمّ إلى شبكة مزوّدينا الموثوقين",en:"Join our network of vetted providers"},
+  prest_p:{fr:"Notaires, architectes, géomètres, bureaux d'études, entreprises BTP… Nous travaillons avec des partenaires sérieux et vérifiés. Présentez-vous, nous vous recontactons.",ar:"موثّقون، مهندسون معماريون، مساحون، مكاتب دراسات، مقاولات بناء… نعمل مع شركاء جادّين وموثوقين. عرّف بنفسك، وسنعاود الاتصال بك.",en:"Notaries, architects, surveyors, engineering offices, construction firms… We work with serious, vetted partners. Introduce yourself and we'll get back to you."},
+  prest_why:{fr:"Pourquoi rejoindre le réseau Aman Conseil :",ar:"لماذا تنضمّ إلى شبكة أمان للاستشارة:",en:"Why join the Aman Conseil network:"},
+  prest_benefits:{fr:"<li><span class=\"ic\">✓</span><span><b>Apport d'affaires</b> — des clients sérieux, déjà qualifiés et accompagnés.</span></li><li><span class=\"ic\">✓</span><span><b>Label « Projet vérifié »</b> — votre intervention adossée à notre méthode.</span></li><li><span class=\"ic\">✓</span><span><b>Relation durable</b> — des projets récurrents, pas du one-shot.</span></li>",ar:"<li><span class=\"ic\">✓</span><span><b>جلب الزبائن</b> — زبائن جادّون، مؤهّلون ومُرافَقون مسبقًا.</span></li><li><span class=\"ic\">✓</span><span><b>علامة «مشروع مُتحقَّق منه»</b> — تدخّلك مدعوم بمنهجيتنا.</span></li><li><span class=\"ic\">✓</span><span><b>علاقة دائمة</b> — مشاريع متكرّرة، لا مرّة واحدة.</span></li>",en:"<li><span class=\"ic\">✓</span><span><b>Business referrals</b> — serious clients, already qualified and supported.</span></li><li><span class=\"ic\">✓</span><span><b>\"Verified project\" label</b> — your work backed by our method.</span></li><li><span class=\"ic\">✓</span><span><b>Lasting relationship</b> — recurring projects, not one-shot.</span></li>"},
+  prest_nom:{fr:"Nom / Raison sociale",ar:"الاسم / التسمية التجارية",en:"Name / Company"},
+  prest_nom_ph:{fr:"Votre nom ou société",ar:"اسمك أو شركتك",en:"Your name or company"},
+  prest_metier:{fr:"Métier",ar:"المهنة",en:"Profession"},
+  prest_opt0:{fr:"— Choisir —",ar:"— اختر —",en:"— Select —"},
+  prest_opt_not:{fr:"Notaire",ar:"موثّق",en:"Notary"},
+  prest_opt_arch:{fr:"Architecte",ar:"مهندس معماري",en:"Architect"},
+  prest_opt_geo:{fr:"Géomètre-topographe",ar:"مساح طوبوغرافي",en:"Surveyor"},
+  prest_opt_bet:{fr:"Bureau d'études (BET)",ar:"مكتب دراسات",en:"Engineering office"},
+  prest_opt_btp:{fr:"Entreprise BTP",ar:"مقاولة بناء",en:"Construction firm"},
+  prest_opt_geotech:{fr:"Laboratoire géotechnique",ar:"مختبر جيوتقني",en:"Geotechnical lab"},
+  prest_opt_juriste:{fr:"Juriste / Avocat",ar:"حقوقي / محامٍ",en:"Legal advisor / Lawyer"},
+  prest_opt_compta:{fr:"Comptable / Expert-comptable",ar:"محاسب / خبير محاسب",en:"Accountant / Chartered accountant"},
+  prest_opt_banquier:{fr:"Banquier / Financement",ar:"مصرفي / تمويل",en:"Banker / Financing"},
+  prest_opt_autre:{fr:"Autre",ar:"أخرى",en:"Other"},
+  prest_ville:{fr:"Ville",ar:"المدينة",en:"City"},
+  prest_ville_ph:{fr:"Ex. Casablanca",ar:"مثال: الدار البيضاء",en:"e.g. Casablanca"},
+  prest_tel:{fr:"Téléphone",ar:"الهاتف",en:"Phone"},
+  prest_mail:{fr:"Email",ar:"البريد الإلكتروني",en:"Email"},
+  prest_mail_ph:{fr:"vous@email.com",ar:"you@email.com",en:"you@email.com"},
+  prest_msg:{fr:"Message (facultatif)",ar:"رسالة (اختياري)",en:"Message (optional)"},
+  prest_msg_ph:{fr:"Vos références, votre zone d'intervention…",ar:"مراجعك، منطقة تدخّلك…",en:"Your references, your area of operation…"},
+  prest_consent:{fr:"Vos données sont traitées pour l'évaluation de votre candidature, conformément à la loi 09-08 (CNDP).",ar:"تُعالَج بياناتك لتقييم ترشّحك، وفقًا للقانون 09-08 (CNDP).",en:"Your data is processed to assess your application, under law 09-08 (CNDP)."},
+  prest_btn:{fr:"Envoyer ma candidature →",ar:"أرسل ترشّحي ←",en:"Send my application →"},
+  prest_ok_big:{fr:"Merci, c'est envoyé !",ar:"شكرًا، تمّ الإرسال!",en:"Thanks, it's sent!"},
+  prest_ok_p:{fr:"Nous étudions votre profil et revenons vers vous rapidement.",ar:"سندرس ملفّك ونعاود الاتصال بك قريبًا.",en:"We'll review your profile and get back to you soon."}
+});
+function applyI18n(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n'); if(T[k]&&T[k][lang]!=null) el.innerHTML=T[k][lang];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph'); if(T[k]&&T[k][lang]!=null) el.placeholder=T[k][lang];});
+}
+let LANG='fr';
+function tr(k){return (T[k]&&(T[k][LANG]||T[k].fr))||'';}
+function setLang(lang, fromUser){
+  LANG=lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+  applyI18n(lang);
+  if(typeof Q!=='undefined'){ QUESTIONS=Q[lang]||Q.fr; }
+  document.querySelectorAll('#langsel button').forEach(b=>b.classList.toggle('on', b.getAttribute('data-lang')===lang));
+  if(fromUser){ const g=document.getElementById('langgate'); if(g) g.classList.add('hidden'); try{localStorage.setItem('aman_lang',lang);}catch(e){} }
+  const sq=document.getElementById('s-q'); if(sq&&sq.classList.contains('on')) renderQ();
+}
+window.addEventListener('DOMContentLoaded',()=>{ let s=null; try{s=localStorage.getItem('aman_lang');}catch(e){} if(s){setLang(s,true);} });
+function submitPrest(e){ e.preventDefault(); const f=document.getElementById('prestForm'); const ok=document.getElementById('prestOk'); f.style.display='none'; ok.classList.add('on'); /* En production : enregistrement du prestataire + notification. */ }
+
+const Q={fr:[
+ {q:"Quel est le statut juridique du terrain ?",hint:"Le statut détermine si le terrain est cessible et constructible.",crit:"bloquant",
+  opts:[{t:"Titre foncier (immatriculé)",s:"ok"},{t:"Melk non titré",s:"warn",r:"Faites immatriculer le terrain avant l'achat pour sécuriser la propriété."},
+        {t:"Collectif / Guich / Habous",s:"bad",r:"Statut souvent inaliénable ou non constructible : vérification juridique impérative."},
+        {t:"Je ne sais pas",s:"unk",r:"Identifiez le statut foncier en priorité : c'est le socle de tout."}]},
+ {q:"Avez-vous un certificat de propriété de moins de 3 mois ?",hint:"Délivré par la Conservation foncière (ANCFCC).",crit:"bloquant",
+  opts:[{t:"Oui",s:"ok"},{t:"Non",s:"bad",r:"Obtenez un certificat de propriété récent : il révèle le vrai propriétaire et les charges."},{t:"Je ne sais pas",s:"unk",r:"Procurez-vous un certificat de propriété récent auprès de l'ANCFCC."}]},
+ {q:"Le vendeur est-il bien le propriétaire inscrit (CIN = titre) ?",hint:"Comparez la CIN au nom figurant sur le titre.",crit:"bloquant",
+  opts:[{t:"Oui",s:"ok"},{t:"Non",s:"bad",r:"Identité vendeur ≠ propriétaire : risque majeur de fraude. À bloquer."},{t:"Je ne sais pas",s:"unk",r:"Vérifiez que le vendeur est le propriétaire inscrit, et toute procuration."}]},
+ {q:"En cas d'indivision/succession, tous les héritiers sont-ils d'accord ?",hint:"Tous les co-indivisaires doivent consentir à la vente.",crit:"bloquant",
+  opts:[{t:"Oui, tous d'accord",s:"ok"},{t:"Non concerné (un seul propriétaire)",s:"ok"},{t:"Non / partiellement",s:"bad",r:"Sans l'accord de tous les héritiers, la vente est attaquable. À régulariser."},{t:"Je ne sais pas",s:"unk",r:"Vérifiez l'acte d'hérédité et l'accord de tous les co-indivisaires."}]},
+ {q:"Le terrain est-il libre d'hypothèque, saisie ou opposition ?",hint:"Ces charges apparaissent sur le certificat de propriété.",crit:"eleve",
+  opts:[{t:"Oui, libre de toute charge",s:"ok"},{t:"Non",s:"bad",r:"Faites lever ou purger toute hypothèque/saisie avant l'achat."},{t:"Je ne sais pas",s:"unk",r:"Vérifiez les inscriptions (hypothèque, saisie, opposition) sur le titre."}]},
+ {q:"Avez-vous la note de renseignements de l'agence urbaine ?",hint:"Elle précise le zonage et les règles de construction.",crit:"bloquant",
+  opts:[{t:"Oui",s:"ok"},{t:"Non",s:"bad",r:"Obtenez la note de renseignements de l'agence urbaine : indispensable."},{t:"Je ne sais pas",s:"unk",r:"Demandez la note de renseignements d'urbanisme avant tout engagement."}]},
+ {q:"Le terrain est-il classé constructible ?",hint:"Vérifiez le zonage au plan d'aménagement.",crit:"bloquant",
+  opts:[{t:"Oui",s:"ok"},{t:"Non / zone agricole ou verte",s:"bad",r:"Un terrain non constructible ruine le projet. Confirmez le zonage."},{t:"Je ne sais pas",s:"unk",r:"Confirmez la constructibilité au plan d'aménagement."}]},
+ {q:"Le terrain a-t-il un accès direct à la voie publique ?",hint:"Un terrain enclavé est difficile à exploiter.",crit:"bloquant",
+  opts:[{t:"Oui",s:"ok"},{t:"Non / enclavé",s:"bad",r:"Sécurisez un accès légal : un terrain enclavé bloque le permis."},{t:"Je ne sais pas",s:"unk",r:"Vérifiez l'existence d'un accès légal à la voie publique."}]},
+ {q:"Le bornage a-t-il été réalisé par un géomètre ?",hint:"Il confirme la surface réelle et les limites.",crit:"eleve",
+  opts:[{t:"Oui",s:"ok"},{t:"Non",s:"bad",r:"Faites borner le terrain : la surface réelle diffère parfois du titre."},{t:"Je ne sais pas",s:"unk",r:"Prévoyez un bornage par géomètre avant la transaction."}]},
+ {q:"Le paiement passera-t-il par un notaire (et non en espèces) ?",hint:"Le notaire sécurise les fonds et l'acte.",crit:"eleve",
+  opts:[{t:"Oui, via notaire",s:"ok"},{t:"Non / en espèces",s:"bad",r:"Passez par un notaire : le cash expose à la fraude et à une pénalité."},{t:"Je ne sais pas",s:"unk",r:"Prévoyez un paiement sécurisé via notaire, jamais en espèces."}]},
+]};
+Q.ar=[
+ {q:"ما هو الوضع القانوني للأرض؟",hint:"الوضع يحدّد ما إذا كانت الأرض قابلة للتفويت والبناء.",crit:"bloquant",
+  opts:[{t:"رسم عقاري (محفّظة)",s:"ok"},{t:"ملك غير محفّظ",s:"warn",r:"قم بتحفيظ الأرض قبل الشراء لتأمين الملكية."},
+        {t:"جماعية / كيش / حبوس",s:"bad",r:"وضع غالبًا غير قابل للتفويت أو البناء: التحقق القانوني إلزامي."},
+        {t:"لا أعرف",s:"unk",r:"حدّد الوضع العقاري أولًا: إنه أساس كل شيء."}]},
+ {q:"هل لديك شهادة ملكية أقل من 3 أشهر؟",hint:"تُسلَّم من المحافظة العقارية (ANCFCC).",crit:"bloquant",
+  opts:[{t:"نعم",s:"ok"},{t:"لا",s:"bad",r:"احصل على شهادة ملكية حديثة: تكشف المالك الحقيقي والأعباء."},{t:"لا أعرف",s:"unk",r:"احصل على شهادة ملكية حديثة من المحافظة العقارية."}]},
+ {q:"هل البائع هو فعلًا المالك المسجَّل (البطاقة الوطنية = الرسم)؟",hint:"قارن البطاقة الوطنية بالاسم المذكور في الرسم.",crit:"bloquant",
+  opts:[{t:"نعم",s:"ok"},{t:"لا",s:"bad",r:"هوية البائع ≠ المالك: خطر احتيال كبير. يجب التوقف."},{t:"لا أعرف",s:"unk",r:"تحقّق أن البائع هو المالك المسجَّل، وأي وكالة."}]},
+ {q:"في حالة الشياع/الإرث، هل كل الورثة موافقون؟",hint:"يجب أن يوافق جميع الشركاء في الملك على البيع.",crit:"bloquant",
+  opts:[{t:"نعم، الجميع موافق",s:"ok"},{t:"غير معني (مالك واحد)",s:"ok"},{t:"لا / جزئيًا",s:"bad",r:"دون موافقة كل الورثة، يكون البيع قابلًا للطعن. يجب التسوية."},{t:"لا أعرف",s:"unk",r:"تحقّق من رسم الإراثة وموافقة جميع الشركاء."}]},
+ {q:"هل الأرض خالية من الرهن أو الحجز أو التعرّض؟",hint:"تظهر هذه الأعباء في شهادة الملكية.",crit:"eleve",
+  opts:[{t:"نعم، خالية من كل عبء",s:"ok"},{t:"لا",s:"bad",r:"ارفع أو طهّر أي رهن/حجز قبل الشراء."},{t:"لا أعرف",s:"unk",r:"تحقّق من التقييدات (رهن، حجز، تعرّض) على الرسم."}]},
+ {q:"هل لديك مذكّرة معلومات من الوكالة الحضرية؟",hint:"تحدّد التقسيم وقواعد البناء.",crit:"bloquant",
+  opts:[{t:"نعم",s:"ok"},{t:"لا",s:"bad",r:"احصل على مذكّرة المعلومات من الوكالة الحضرية: لا غنى عنها."},{t:"لا أعرف",s:"unk",r:"اطلب مذكّرة معلومات التعمير قبل أي التزام."}]},
+ {q:"هل الأرض مصنّفة قابلة للبناء؟",hint:"تحقّق من التقسيم في تصميم التهيئة.",crit:"bloquant",
+  opts:[{t:"نعم",s:"ok"},{t:"لا / منطقة فلاحية أو خضراء",s:"bad",r:"أرض غير قابلة للبناء تدمّر المشروع. أكّد التقسيم."},{t:"لا أعرف",s:"unk",r:"أكّد قابلية البناء في تصميم التهيئة."}]},
+ {q:"هل للأرض منفذ مباشر إلى الطريق العمومي؟",hint:"الأرض المحبوسة صعبة الاستغلال.",crit:"bloquant",
+  opts:[{t:"نعم",s:"ok"},{t:"لا / محبوسة",s:"bad",r:"أمّن منفذًا قانونيًا: الأرض المحبوسة تعرقل الرخصة."},{t:"لا أعرف",s:"unk",r:"تحقّق من وجود منفذ قانوني إلى الطريق العمومي."}]},
+ {q:"هل أُنجز التحديد من طرف مساح طوبوغرافي؟",hint:"يؤكّد المساحة الحقيقية والحدود.",crit:"eleve",
+  opts:[{t:"نعم",s:"ok"},{t:"لا",s:"bad",r:"قم بتحديد الأرض: المساحة الحقيقية تختلف أحيانًا عن الرسم."},{t:"لا أعرف",s:"unk",r:"خطّط لتحديد من طرف مساح قبل المعاملة."}]},
+ {q:"هل سيتم الأداء عبر موثّق (وليس نقدًا)؟",hint:"الموثّق يؤمّن الأموال والعقد.",crit:"eleve",
+  opts:[{t:"نعم، عبر موثّق",s:"ok"},{t:"لا / نقدًا",s:"bad",r:"مرّ عبر موثّق: النقد يعرّض للاحتيال ولغرامة."},{t:"لا أعرف",s:"unk",r:"خطّط لأداء آمن عبر موثّق، وليس نقدًا أبدًا."}]},
+];
+Q.en=[
+ {q:"What is the legal status of the land?",hint:"The status determines whether the land can be sold and built on.",crit:"bloquant",
+  opts:[{t:"Land title (registered)",s:"ok"},{t:"Unregistered melk",s:"warn",r:"Register the land before buying to secure ownership."},
+        {t:"Collective / Guich / Habous",s:"bad",r:"Often inalienable or non-buildable status: legal check is mandatory."},
+        {t:"I don't know",s:"unk",r:"Identify the land status first: it's the foundation of everything."}]},
+ {q:"Do you have a property certificate less than 3 months old?",hint:"Issued by the Land Registry (ANCFCC).",crit:"bloquant",
+  opts:[{t:"Yes",s:"ok"},{t:"No",s:"bad",r:"Get a recent property certificate: it reveals the true owner and any charges."},{t:"I don't know",s:"unk",r:"Obtain a recent property certificate from ANCFCC."}]},
+ {q:"Is the seller really the registered owner (ID = title)?",hint:"Compare the ID card to the name on the title.",crit:"bloquant",
+  opts:[{t:"Yes",s:"ok"},{t:"No",s:"bad",r:"Seller ≠ owner: major fraud risk. Stop here."},{t:"I don't know",s:"unk",r:"Check that the seller is the registered owner, and any power of attorney."}]},
+ {q:"In case of joint ownership/inheritance, do all heirs agree?",hint:"All co-owners must consent to the sale.",crit:"bloquant",
+  opts:[{t:"Yes, all agree",s:"ok"},{t:"Not concerned (single owner)",s:"ok"},{t:"No / partially",s:"bad",r:"Without all heirs' consent, the sale is challengeable. Must be regularised."},{t:"I don't know",s:"unk",r:"Check the inheritance deed and all co-owners' consent."}]},
+ {q:"Is the land free of mortgage, seizure or objection?",hint:"These charges appear on the property certificate.",crit:"eleve",
+  opts:[{t:"Yes, free of any charge",s:"ok"},{t:"No",s:"bad",r:"Have any mortgage/seizure lifted or cleared before buying."},{t:"I don't know",s:"unk",r:"Check the registrations (mortgage, seizure, objection) on the title."}]},
+ {q:"Do you have the urban agency information note?",hint:"It specifies zoning and building rules.",crit:"bloquant",
+  opts:[{t:"Yes",s:"ok"},{t:"No",s:"bad",r:"Get the urban agency information note: it's essential."},{t:"I don't know",s:"unk",r:"Request the planning information note before any commitment."}]},
+ {q:"Is the land classified as buildable?",hint:"Check the zoning in the development plan.",crit:"bloquant",
+  opts:[{t:"Yes",s:"ok"},{t:"No / agricultural or green zone",s:"bad",r:"Non-buildable land ruins the project. Confirm the zoning."},{t:"I don't know",s:"unk",r:"Confirm buildability in the development plan."}]},
+ {q:"Does the land have direct access to a public road?",hint:"Landlocked land is hard to use.",crit:"bloquant",
+  opts:[{t:"Yes",s:"ok"},{t:"No / landlocked",s:"bad",r:"Secure legal access: landlocked land blocks the permit."},{t:"I don't know",s:"unk",r:"Check for legal access to a public road."}]},
+ {q:"Has the boundary survey been done by a surveyor?",hint:"It confirms the real area and boundaries.",crit:"eleve",
+  opts:[{t:"Yes",s:"ok"},{t:"No",s:"bad",r:"Have the land surveyed: the real area sometimes differs from the title."},{t:"I don't know",s:"unk",r:"Plan a surveyor's boundary survey before the transaction."}]},
+ {q:"Will payment go through a notary (and not in cash)?",hint:"The notary secures the funds and the deed.",crit:"eleve",
+  opts:[{t:"Yes, via notary",s:"ok"},{t:"No / in cash",s:"bad",r:"Go through a notary: cash exposes you to fraud and a penalty."},{t:"I don't know",s:"unk",r:"Plan a secure payment via notary, never in cash."}]},
+];
+let QUESTIONS=Q.fr;
+
+let cur=0; const answers=new Array(QUESTIONS.length).fill(null);
+function setProg(p){document.getElementById('fill').style.width=p+'%';}
+function show(id){document.querySelectorAll('.pd-screen').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');document.getElementById('prediag').scrollIntoView({behavior:'smooth'});}
+function start(){cur=0;renderQ();show('s-q');}
+function renderQ(){
+  const Q=QUESTIONS[cur];
+  document.getElementById('qcount').textContent=`${tr('qcount_word')} ${cur+1} / ${QUESTIONS.length}`;
+  document.getElementById('qtext').textContent=Q.q;
+  document.getElementById('qhint').textContent=Q.hint;
+  setProg(Math.round((cur)/QUESTIONS.length*100));
+  const box=document.getElementById('opts');box.innerHTML='';
+  Q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt'+(answers[cur]===i?' sel':'');
+    b.innerHTML=`<span class="tick"></span><span>${o.t}</span>`;
+    b.onclick=()=>{answers[cur]=i;renderQ();setTimeout(next,230);};
+    box.appendChild(b);
+  });
+  document.querySelector('#s-q .pd-back').style.visibility = cur===0?'hidden':'visible';
+}
+function next(){ if(answers[cur]===null) return;
+  if(cur<QUESTIONS.length-1){cur++;renderQ();} else {setProg(100);show('s-lead');} }
+function back(){ if(cur>0){cur--;renderQ();} }
+function checkLead(){
+  const ok=document.getElementById('f-nom').value.trim() && document.getElementById('f-tel').value.trim();
+  document.getElementById('leadBtn').disabled=!ok;
+}
+function finish(){ computeResult(); show('s-result'); }
+function restart(){ cur=0; answers.fill(null); document.getElementById('f-nom').value=''; document.getElementById('f-tel').value=''; document.getElementById('f-mail').value=''; document.getElementById('leadBtn').disabled=true; show('s-intro'); }
+function computeResult(){
+  let ok=0,warn=0,bad=0,bloqBad=0;const recos=[];
+  answers.forEach((ai,qi)=>{
+    const Q=QUESTIONS[qi];const o=Q.opts[ai];
+    if(o.s==='ok')ok++;
+    else if(o.s==='warn'||o.s==='unk'){warn++;if(o.r)recos.push({lvl:'warn',t:o.r});}
+    else if(o.s==='bad'){bad++;if(Q.crit==='bloquant')bloqBad++;if(o.r)recos.push({lvl:'bad',t:o.r});}
+  });
+  let cls,big,msg;
+  if(bloqBad>0){cls='v-rouge';big=tr('v_red_big');msg=tr('v_red_msg');}
+  else if(bad>0||warn>0){cls='v-orange';big=tr('v_orange_big');msg=tr('v_orange_msg');}
+  else{cls='v-green';big=tr('v_green_big');msg=tr('v_green_msg');}
+  const vb=document.getElementById('vbox');vb.className='verdict '+cls;
+  document.getElementById('vbig').textContent=big;
+  document.getElementById('vmsg').textContent=msg;
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-warn').textContent=warn;
+  document.getElementById('sc-bad').textContent=bad;
+  const list=document.getElementById('recoList');list.innerHTML='';
+  if(recos.length===0){list.innerHTML='<div class="reco"><span class="ic" style="background:#0FA86A">✓</span><span>'+tr('recos_none')+'</span></div>';}
+  recos.sort((a,b)=>a.lvl==='bad'?-1:1).slice(0,6).forEach(r=>{
+    const d=document.createElement('div');d.className='reco';
+    const color=r.lvl==='bad'?'#E0483B':'#E8973A';
+    d.innerHTML=`<span class="ic" style="background:${color}">!</span><span>${r.t}</span>`;
+    list.appendChild(d);
+  });
+}
+</script>
+</body>
+</html>
