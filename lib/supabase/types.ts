@@ -69,22 +69,38 @@ export type Prestataire = {
 export type Database = {
   public: {
     Tables: {
-      leads: { Row: Lead; Insert: Partial<Lead> & Pick<Lead, 'nom' | 'telephone'>; Update: Partial<Lead> };
+      leads: {
+        Row: Lead;
+        Insert: Partial<Lead> & Pick<Lead, 'nom' | 'telephone'>;
+        Update: Partial<Lead>;
+        Relationships: [];
+      };
       prediagnostics: {
         Row: Prediagnostic;
         Insert: Omit<Prediagnostic, 'id' | 'created_at'>;
         Update: Partial<Prediagnostic>;
+        Relationships: [];
       };
       messages_contact: {
         Row: MessageContact;
         Insert: Partial<MessageContact> & Pick<MessageContact, 'nom' | 'contact'>;
         Update: Partial<MessageContact>;
+        Relationships: [];
       };
       prestataires: {
         Row: Prestataire;
         Insert: Partial<Prestataire> & Pick<Prestataire, 'nom' | 'metier' | 'telephone'>;
         Update: Partial<Prestataire>;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: {
+      lead_status: LeadStatus;
+      verdict: Verdict;
+      metier: Metier;
+    };
+    CompositeTypes: Record<string, never>;
   };
 };
